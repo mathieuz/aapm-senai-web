@@ -1,0 +1,117 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+::selection{
+    background-color: #fd002693;
+}
+
+* {
+    font-family: "Poppins";
+}
+
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 0;
+    height: 100%;
+
+    background-image: url("../img/senai-bg-onda.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: 200%;
+
+    animation-name: senai-onda-svg;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0;
+
+    background-color: aquamarine;
+}
+
+    section{
+        margin: 0;
+        background-color: rgba(0, 0, 255, 0.199);
+    }
+
+#senaiLogo{
+    width: 300px;
+}
+
+/**/
+
+#formLogin{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+    background-color: white;
+}
+
+    #formLogin div{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #formLogin input[type=text]{
+        width: 98%;
+
+        padding-bottom: 5px;
+
+        border: none;
+        border-bottom: 1.5px solid gray;
+        outline: none;
+
+        transition: 0s;
+    }
+
+        #formLogin input[type=text]:focus{
+            margin-top: 2px;
+            border-bottom: 2px solid red;
+        }
+
+    #formSenaiLogo{
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        align-self: center;
+        width: 150px;
+
+        filter: grayscale();
+    }
+
+    #tituloBoasVindas{
+        margin: 5px;
+
+        font-size: 20px;
+        font-weight: 300;
+
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+@media (max-width: 700px){
+    body{
+        background-size: 1000%;
+    }
+}
