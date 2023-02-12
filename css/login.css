@@ -142,7 +142,7 @@ main{
 
                 color: white;
                 font-weight: 600;
-                text-transform: 100;
+                text-transform: uppercase;
 
                 transition: all 0.2s;
             }
@@ -199,3 +199,15 @@ footer{
     footer #footerImgLogo{
         width: 100px;
     }
+
+/**/
+
+@media (max-width: 580px){
+    main section:nth-child(1){
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+}
