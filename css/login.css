@@ -10,9 +10,12 @@
 
 html{
     height: 100%;
+    overflow-x: hidden;
 }
 
-img {
+span { margin: 0px; }
+
+img, label{
     user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
@@ -62,7 +65,18 @@ main{
 
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.332);
         background-color: white;
+
+        animation-name: anim-surgir-form;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
     }
+
+        @keyframes anim-surgir-form{
+            from{
+                transform: translatey(10px);
+                opacity: -200;
+            }
+        }
 
         #formLogin div{
             display: flex;
@@ -171,7 +185,17 @@ main{
 
 section #imgLogoAapm{
     width: 200px;
+
+    animation-name: anim-surgir-logo;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
 }
+
+    @keyframes anim-surgir-logo {
+        from{
+            transform: translateX(-500px);
+        }
+    }
 
 footer{
     display: flex;
@@ -199,6 +223,8 @@ footer{
     footer #footerImgLogo{
         width: 100px;
     }
+
+/**/
 
 /**/
 
