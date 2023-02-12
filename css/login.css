@@ -1,0 +1,201 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+::selection{
+    background-color: #fd0026;
+}
+
+* {
+    font-family: "Poppins", "Helvetica";
+}
+
+html{
+    height: 100%;
+}
+
+img {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    height: 100%;
+
+    background-color: rgba(106, 0, 255, 0);
+}
+
+main{
+    align-self: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../img/svg/senai-wave.svg");
+    background-repeat: no-repeat;
+    background-position-y: 170%;
+    background-size: contain;
+}
+
+    @media (max-width: 950px){
+        main{
+            background-position-y: 100%;
+        }
+    }
+
+    #formLogin{
+        display: flex;
+        flex-direction: column;
+
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 10px;
+        width: auto;
+
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.332);
+        background-color: white;
+    }
+
+        #formLogin div{
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            margin-bottom: 12px;
+        }
+
+        #formLogin #senaiLogo{
+            align-self: center;
+
+            margin: 5px;
+            margin-top: 20px;
+            width: 140px;
+        }
+
+        #formLogin h1{
+            margin: 5px;
+            margin-bottom: 20px;
+
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        #formLogin input[type=text], #formLogin input[type=password], #formLogin input[type=email]{
+            width: 300px;
+
+            border: 1px solid gainsboro;
+            border-radius: 2px;
+            padding: 10px;
+
+            outline-color: transparent;
+
+            transition: all 0.3s;
+        }
+
+        #formLogin input[type=password]{
+            letter-spacing: 5px;
+        }
+
+            #formLogin label{
+                position: absolute;
+                margin-top: 10px;
+                margin-left: 10px;
+                padding: 2px;
+
+                font-size: 10px;
+                color: gray;
+                background-color: white;
+
+                pointer-events: none;
+
+                transition: all 0.2s;
+            }
+
+            /*Uma vez que o focus for aplicado no input, o label associado será afetado. A estrutura do HTML deve condizer com input seguido de label estruturalmente. Se o input for válido, o estilo do label vai se manter*/
+            #formLogin input:focus + label, #formLogin input:valid + label{
+                margin-top: -10px;
+                color: #fd0026;
+            }
+
+            #formLogin input:focus, #formLogin input:valid{
+                outline-color: #fd0026;
+            }
+
+            #formLogin #btnFazerLogin{
+                cursor: pointer;
+                margin: 5px;
+                margin-bottom: 20px;
+                padding: 8px;
+                
+                border: none;
+                border-radius: 2px;
+                background-color: #fd0026;
+
+                color: white;
+                font-weight: 600;
+                text-transform: 100;
+
+                transition: all 0.2s;
+            }
+
+                #formLogin #btnFazerLogin:hover{
+                    background-color: #cd001f;
+                }
+
+            #formLogin #mostrarSenha{
+                cursor: pointer;
+
+                align-self: flex-end;
+                position: absolute;
+
+                margin-right: 10px;
+                margin-top: 10px;
+                width: 20px;
+
+                filter: grayscale();
+                transition: all 0.2s;
+            }
+
+                #formLogin #mostrarSenha:hover{
+                    filter: none;
+                }
+
+section #imgLogoAapm{
+    width: 200px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+
+    padding: 5px;
+    background-color: black;
+}
+
+    footer span{
+        margin-left: 10px;
+
+        color: white;
+        font-size: 10px;
+    }
+
+    footer div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    footer #footerImgLogo{
+        width: 100px;
+    }
