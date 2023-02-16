@@ -1,0 +1,36 @@
+[AAPM SENAI - Funcionamento do Aplicativo]
+
+- Sistema Web (uso exclusivo por Administrador)
+- Aplicativo Mobile (uso exclusivo por Aluno)
+
+Informações Aluno: número de matrícula; nome; e-mail; turma; turno; data de nascimento; telefone; cpf; data de prazo limite de renovação; início e fim do período de curso; numero de chave do armario.
+
+Informações Administrador: nome; e-mail.
+
+_____________________________________________________________________
+
+
+[Sistema Web - Painel de Gerenciamento]
+
+A aplicação web seria voltada apenas para as pessoas responsáveis por gerenciar as atividades da AAPM. Esse responsável é identificado dentro do sistema como "Administrador". Apenas os administradores conseguem acesso a plataforma web.
+
+O sistema web constitui-se de um painel acessado pelo navegador e presente dentro das redes privadas da instituição. O administrador seria responsável por gerir, através deste sistema, atividades que incluem o uso dos dados cadastrais dos alunos associados a AAPM. Essas atividades se comunicam diretamente entre site e aplicação mobile, que é de uso exclusivo dos alunos.
+
+- Cadastro de alunos associados: uma vez que o pagamento foi efetuado, um código de acesso é gerado para o aluno que será exigido dentro do formulário de cadastro no aplicativo mobile. Essa é uma medida para evitar que alunos não-associados consigam se cadastrar e ter acesso na plataforma.
+
+	- O código é gerado dentro do sistema web junto com um pré-cadastro do aluno na plataforma para fins de consulta e garantir que o código não seja perdido.
+
+Após o preenchimento dos dados e do código de cadastro dentro do aplicativo, o aluno tem acesso ao seus dados cadastrais, junto com a Carteira Digital AAPM.
+
+[Funções]: pesquisa de alunos; controle das chaves dos armários; controle de cadastros de alunos.
+
+_____________________________________________________________________
+
+
+[Aplicação Mobile]
+
+O uso da aplicação mobile seria de uso exclusivo para alunos associados da AAPM.
+
+A aplicação consiste no acesso da carteira digital da AAPM juntamente com todos os seus dados cadastrais. De acordo com o prazo limite de renovação, uma notificação alertando o prazo de pagamento seria enviado ao usuário dias antes.
+
+[Funções]: ver a carteirinha; escanear QR Code;
