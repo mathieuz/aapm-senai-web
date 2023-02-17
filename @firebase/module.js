@@ -6,6 +6,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
 
 /* Importação dos módulos de conexão do Firebase. */
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
+import { getFirestore, doc, collection, query, where } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 /* Connfirguração de conexão entre a aplicação e o Firebase. */
 const firebaseConfig = {
@@ -21,6 +22,7 @@ const firebaseConfig = {
 /* A constante 'app' tem o método que inicializa a conexão do Firebase, além de ser utilizado como parâmetro de inicialização de módulos de conexão do Firebase. */
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
+const db = getFirestore(app)
 
 /* Todos os event-listeners e e suas funções. */
 document.body.querySelector("#btnFazerLogin").addEventListener("click", fazerLogin)
@@ -39,6 +41,7 @@ document.body.querySelector("#btnFazerLogin").addEventListener("click", fazerLog
         signInWithEmailAndPassword(autenticacao, email, senha)
             .then((userCredential) => {
                 alert("[SUCESSO] E-mail autenticado com sucesso.")
+                window.location.href = "./painel.html"
 
             })
             .catch((error) => {
