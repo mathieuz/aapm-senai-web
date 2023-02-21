@@ -37,7 +37,7 @@ document.body.querySelector("#btnFazerLogin").addEventListener("click", fazerLog
         let email = document.getElementById("inputEmail").value
         let senha = document.getElementById("inputSenha").value
 
-        const autenticacao = getAuth();
+        const autenticacao = getAuth()
         signInWithEmailAndPassword(autenticacao, email, senha)
             .then((userCredential) => {
                 alert("[SUCESSO] E-mail autenticado com sucesso.")
@@ -46,7 +46,6 @@ document.body.querySelector("#btnFazerLogin").addEventListener("click", fazerLog
             })
             .catch((error) => {
                 alert("[ERRO] E-mail não corresponde dentro dos e-mails registrados.")
-
             });
 
     }
