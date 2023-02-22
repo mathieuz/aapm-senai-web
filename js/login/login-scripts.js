@@ -6,14 +6,14 @@ let inputSenha = document.getElementById("inputSenha")
 
 mostrarSenha.addEventListener("click", () => {
     if (estaLigado === false){
-        mostrarSenha.src = "../img/icones/mostrarSenhaOn.png"
+        mostrarSenha.src = "./img/icones/mostrarSenhaOn.png"
         mostrarSenha.title = "Ocultar Senha"
         inputSenha.type = "text"
 
         estaLigado = true
 
     } else if (estaLigado === true) {
-        mostrarSenha.src = "../img/icones/mostrarSenhaOff.png"
+        mostrarSenha.src = "./img/icones/mostrarSenhaOff.png"
         mostrarSenha.title = "Mostrar Senha"
         inputSenha.type = "password"
 

@@ -70,8 +70,12 @@ nav{
         transition: all 0.3s;
     }
 
+        nav div:focus{
+            background-color: #fd0026;
+        }
+
         nav div:hover{
-            background-color: rgba(255, 0, 0, 0.727);
+            background-color: rgba(255, 0, 0, 0.556);
         }
 
         nav .iconeLink{
@@ -81,7 +85,6 @@ nav{
             height: 20px;
 
             padding: 5px;
-            padding-left: 0px;
             border-radius: 10px;
         }
 
