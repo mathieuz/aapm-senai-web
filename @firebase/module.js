@@ -49,7 +49,7 @@ const db = getFirestore(app)
 
                 let imgAluno = document.createElement("img")
                 imgAluno.setAttribute("class", "imgAluno")
-                imgAluno.src = "../../../img/icones/icon-foto-perfil.png"
+                imgAluno.src = "../../img/icones/icon-foto-perfil.png"
 
                 let table = document.createElement("table")
                 let thead = document.createElement("thead")
