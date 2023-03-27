@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/painel/global.css">
+    <link rel="stylesheet" href="../../css/painel/todos-os-alunos.css">
+    <title>Alunos</title>
+</head>
+<body>
+    <div class="divHeading">
+        <h1 class="tituloSecaoPagina">Alunos</h1>
+    </div>
+    
+
+    <!--
+    <section id="sectionRegistro">
+        <div class="registroItem">
+            <div>
+                <img src="../../../img/icones/icon-foto-perfil.png">
+            </div>
+            <div>
+                <span>Matheus André da Silva</span>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section id="sectionRegistro">
+
+        <!--
+        <div class="registroItem">
+            <img src="../../../img/icones/icon-foto-perfil.png" class="imgAluno">
+            
+            <table>
+                <thead>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Curso</th>
+                    <th>Turma</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09876543212</td>
+                        <td>Matheus André da Silva</td>
+                        <td>234.432.243-43</td>
+                        <td>Desenvolvimento de Sistemas</td>
+                        <td>M3DSI</td>
+                    </tr>
+                </tbody>
+            </table> 
+             
+        </div>
+        -->
+             
+    </section>
+
+    <section id="modalRegistro">
+        <span id="botaoFechar" title="Fechar Janela">&times;</span>
+
+        <section class="coluna" id="colunaFoto">
+            <img src="../../../img/icones/icon-foto-perfil.png" id="imgAluno">
+
+            <span id="nomeAluno">Matheus André da Silva</span>
+
+            <div class="itemCadastral" title="E-mail institucional">
+                <img src="../../../img/icones/icon-email.png" class="icone">
+                <span id="emailAluno">matheus@gmail.com</span>
+            </div>
+
+            <div class="itemCadastral" title="Telefone">
+                <img src="../../../img/icones/icon-telefone.png" class="icone">
+                <span id="telefoneAluno">(11) 98765-4321</span>
+            </div>
+
+            <div class="itemCadastral" title="Curso">
+                <img src="../../../img/icones/icon-curso.png" class="icone">
+                <span id="cursoAluno">Desenvolvimento de Sistemas</span>
+            </div>
+
+            <div class="itemCadastral" title="Data de Nascimento">
+                <img src="../../../img/icones/icon-dtnascimento.png" class="icone">
+                <span id="dataNascimentoAluno">29/03/1992</span>
+            </div>
+        </section>
+
+        <section class="coluna">
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputMatricula" value="0987654321">
+                <label>Matrícula</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputTurma" value="M3DSI">
+                <label>Turma</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputCategoria" value="Técnico">
+                <label>Categoria</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputPeriodo" value="Técnico">
+                <label>Período</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="date" id="inputInicioDoCurso" class="inputDados" value="2001-01-01">
+                <label>Início do Curso</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="date" id="inputFimDoCurso" class="inputDados" value="2001-01-01">
+                <label>Fim do Curso</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="text" id="numArmario" class="inputDados" value="#####">
+                <label>Número do Armário</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="text" id="voucher" class="inputDados" value="#####">
+                <label>Voucher de Wi-Fi</label>
+            </div>
+        </section>
+    </section>
+
+
+    <script type="module" src="../../../@firebase/module.js"></script>
+    <script src="../../../js/painel/alunos/modal.js" type="text/javascript"></script>
+</body>
+</html>

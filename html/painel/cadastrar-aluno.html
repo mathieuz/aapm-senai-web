@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/painel/global.css">
+    <link rel="stylesheet" href="../../css/painel/cadastrar-aluno.css">
+    <title>Cadastrar Aluno</title>
+</head>
+<body>
+    <div class="divHeading">
+        <h1 class="tituloSecaoPagina">Cadastrar Aluno</h1>
+    </div>
+    <main>
+        <div class="div-coluna">
+            <div>
+                <input type="text" id="inputNumeroDaMatricula">
+                <label>Número da Matrícula</label>
+            </div>
+            <div>
+                <input type="text" id="inputNome">
+                <label>Nome do Aluno</label>
+            </div>
+            <div>
+                <input type="date" id="inputDataDeNascimento">
+                <label>Data de Nascimento</label>
+            </div>
+            <div>
+                <input type="text" id="inputCpf">
+                <label>CPF</label>
+            </div>
+            <div>
+                <input type="text" id="inputTelefone">
+                <label>Telefone</label>
+            </div>
+            <div>
+                <select id="inputCategoria">
+                    <option>CAI</option>
+                    <option>Técnico</option>
+                    <option>Transversal</option>
+                    <option>FIC</option>
+                </select>
+                <label>Categoria</label>
+            </div>
+            <div>
+                <input type="text" id="inputTurma">
+                <label>Turma</label>
+            </div>
+            <div>
+                <input type="text" id="inputCurso">
+                <label>Curso</label>
+            </div>
+            <div>
+                <select id="inputPeriodo">
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+                <label>Período</label>
+            </div>
+
+            <div>
+                <input type="date" id="inputDataDeInicio">
+                <label>Data de Início</label>
+            </div>
+            <div>
+                <input type="date" id="inputDataDeConclusao">
+                <label>Data de Conclusão</label>
+            </div>
+
+            <div>
+                <input type="text" id="inputNumArmario">
+                <label>Número do Armário</label>
+            </div>
+            <div>
+                <input type="text" id="inputVoucher">
+                <label>Voucher de Wi-Fi</label>
+            </div>
+            <div>
+                <input type="text" id="inputEmailInstitucional">
+                <label>E-mail Institucional</label>
+            </div>
+            <div>
+                <input type="text" id="inputSenha" value="aluno123" disabled>
+                <label>Senha</label>
+            </div>
+            <div>
+                <button id="btnCadastrarAluno">Cadastrar</button>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script type="module" src="../../../@firebase/module.js"></script>
+</body>
+</html>
