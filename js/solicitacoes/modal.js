@@ -1,5 +1,5 @@
 // Seleciona o botão de abertura do modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("sectionRegistro");
 
 // Seleciona o modal
 var modal = document.getElementById("myModal");
