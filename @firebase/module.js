@@ -37,7 +37,7 @@ const db = getFirestore(app)
 
     try{
 
-        if (document.location.pathname.includes("/todos-os-alunos.html")){
+        if (document.location.pathname.includes("/todos-os-alunos.html") || document.location.pathname.includes("/solicitacoes.html")){
             const colecao = collection(db, "Aluno")
             const arrayDocumentos = await getDocs(colecao)
 
@@ -241,3 +241,4 @@ const db = getFirestore(app)
             modalRegistro.style.display = "none"
         })
     }
+
