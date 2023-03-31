@@ -15,7 +15,35 @@ let arrayIcones = document.getElementsByClassName("icone-verif")
 
 /*Verificação de campos: executa quando há uma tentativa de realizar o cadastro.*/
 document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
-    let inputNumeroDaMatricula = document.getElementById("inputNumeroDaMatricula").value
+    for (let i = 0; i < arrayInput.length; i++){
+        if (arrayInput[i].value.length > 0){
+
+            arrayInput[i].classList.remove("alertaInput")
+            arrayInput[i].classList.add("sucessoInput")
+
+            arrayLabels[i].classList.remove("alertaLabel")
+            arrayLabels[i].classList.add("sucessoLabel")
+
+            arrayIcones[i].src = "../../img/icones/icon-sucesso.png"
+            arrayIcones[i].style.display = "flex"
+
+        } else {
+
+            arrayInput[i].classList.remove("sucessoInput")
+            arrayInput[i].classList.add("alertaInput")
+
+            arrayLabels[i].classList.remove("sucessoLabel")
+            arrayLabels[i].classList.add("alertaLabel")
+
+            arrayIcones[i].src = "../../img/icones/icon-alerta.png"
+            arrayIcones[i].style.display = "flex"
+
+        }
+    }
+})
+
+/*
+let inputNumeroDaMatricula = document.getElementById("inputNumeroDaMatricula").value
     let inputNome = document.getElementById("inputNome").value
     let inputDataDeNascimento = document.getElementById("inputDataDeNascimento").value
     let inputCpf = document.getElementById("inputCpf").value
@@ -54,4 +82,4 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
             });
 
         })
-})
+*/
