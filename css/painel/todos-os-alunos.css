@@ -21,7 +21,7 @@
 }
 
     .registroItem:last-child{
-        margin-bottom: auto;
+        margin-bottom: 40px;
     }
 
     .registroItem:hover{

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/painel/global.css">
     <link rel="stylesheet" href="../../css/painel/cadastrar-aluno.css">
+    <link rel="stylesheet" href="../../css/painel/cadastrar-aluno-verificacao.css">
     <title>Cadastrar Aluno</title>
 </head>
 <body>
@@ -15,41 +16,49 @@
     <main>
         <div class="div-coluna">
             <div>
-                <input type="text" id="inputNumeroDaMatricula">
+                <input type="text" id="inputNumeroDaMatricula" class="inputCad" maxlength="10">
                 <label>Número da Matrícula</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
-                <input type="text" id="inputNome">
+                <input type="text" id="inputNome" class="inputCad">
                 <label>Nome do Aluno</label>
+                <img class="icone-verif" src="../../img/icones/icon-alerta.png">
             </div>
             <div>
-                <input type="date" id="inputDataDeNascimento">
+                <input type="date" id="inputDataDeNascimento" class="inputCad">
                 <label>Data de Nascimento</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
-                <input type="text" id="inputCpf">
+                <input type="text" id="inputCpf" class="inputCad">
                 <label>CPF</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
-                <input type="text" id="inputTelefone">
+                <input type="text" id="inputTelefone" class="inputCad">
                 <label>Telefone</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
-                <select id="inputCategoria">
+                <select id="inputCategoria" class="inputCad">
                     <option>CAI</option>
                     <option>Técnico</option>
                     <option>Transversal</option>
                     <option>FIC</option>
                 </select>
                 <label>Categoria</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
-                <input type="text" id="inputTurma">
+                <input type="text" id="inputTurma" class="inputCad">
                 <label>Turma</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
-                <input type="text" id="inputCurso">
+                <input type="text" id="inputCurso" class="inputCad">
                 <label>Curso</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
                 <select id="inputPeriodo">
@@ -58,32 +67,39 @@
                     <option>Noite</option>
                 </select>
                 <label>Período</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
 
             <div>
                 <input type="date" id="inputDataDeInicio">
                 <label>Data de Início</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
                 <input type="date" id="inputDataDeConclusao">
                 <label>Data de Conclusão</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
 
             <div>
                 <input type="text" id="inputNumArmario">
                 <label>Número do Armário</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
                 <input type="text" id="inputVoucher">
                 <label>Voucher de Wi-Fi</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
                 <input type="text" id="inputEmailInstitucional">
                 <label>E-mail Institucional</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
                 <input type="text" id="inputSenha" value="aluno123" disabled>
                 <label>Senha</label>
+                <img class="icone-verif" src="../../img/icones/icon-sucesso.png">
             </div>
             <div>
                 <button id="btnCadastrarAluno">Cadastrar</button>
@@ -91,6 +107,6 @@
         </div>
         </div>
     </main>
-    <script type="module" src="../../@firebase/module.js"></script>
+    <script type="module" src="../../@firebase/painel/cadastrar-aluno.js"></script>
 </body>
 </html>
