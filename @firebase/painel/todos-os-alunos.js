@@ -1,11 +1,14 @@
-import { db } from "../module.js"
+import { db, storage } from "../module.js"
 
 import { getDocs, collection, query, where } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+
+import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
 
 const colecao = collection(db, "Aluno")
 const arrayDocumentos = await getDocs(colecao)
 
 arrayDocumentos.forEach(doc => {
+    
     let sectionRegistro = document.getElementById("sectionRegistro")
 
     let registroItem = document.createElement("div")
@@ -69,6 +72,22 @@ arrayDocumentos.forEach(doc => {
     table.append(thead, tbody)
     registroItem.append(imgAluno, table, valueMatricula)
     sectionRegistro.append(registroItem)
+
+    try{
+
+        //Adiciona imagem.
+        const storage = getStorage();
+        const starsRef = ref(storage, `images/${doc.get("email")}`)
+        
+        getDownloadURL(starsRef)
+          .then((url) => {
+            imgAluno.src = `${url}`
+          })
+          .catch((error) => {
+            console.log(error)
+          });
+
+    } catch {}
 })
 
 /*Acessando a section contêiner de todos os registros.*/
@@ -108,6 +127,22 @@ for (let i = 0; i < arrayRegistro.length; i++){
 
             document.getElementById("numArmario").value = doc.get("numArmario")
             document.getElementById("voucher").value = doc.get("voucher")
+
+            try{
+
+                //Adiciona imagem.
+                const storage = getStorage();
+                const starsRef = ref(storage, `images/${doc.get("email")}`)
+                
+                getDownloadURL(starsRef)
+                  .then((url) => {
+                    imgAluno.src = `${url}`
+                  })
+                  .catch((error) => {
+                    console.log(error)
+                  });
+        
+            } catch {}
         })
 
         modalRegistro.style.display = "flex"

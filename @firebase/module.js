@@ -6,6 +6,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebas
 /* Importação dos módulos de conexão do Firebase. */
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
 import { getFirestore, addDoc, doc, getDocs, getDoc, collection, query, where } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
+
 
 /* Connfirguração de conexão entre a aplicação e o Firebase. */
 const firebaseConfig = {
@@ -24,3 +26,4 @@ const app = initializeApp(firebaseConfig)
 /* Constantes necessárias para utilização dos métodos do Firebase que serão exportadas em outros arquivos. */
 export const auth = getAuth(app)
 export const db = getFirestore(app)
+export const storage = getStorage(app)

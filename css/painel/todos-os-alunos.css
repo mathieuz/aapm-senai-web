@@ -36,8 +36,12 @@
     }
 
     .imgAluno{
+        object-fit: cover;
+        
         width: 60px;
+        height: 60px;
         margin-left: 3px;
+        border-radius: 100%;
     }
 
 table{
@@ -143,8 +147,13 @@ th { text-transform: uppercase; }
 
     #modalRegistro #imgAluno{
         width: 240px;
+        height: 240px;
         margin-bottom: 10px;
         align-self: center;
+
+        object-fit: cover;
+
+        border-radius: 100%;
     }
 
     #modalRegistro #nomeAluno{
