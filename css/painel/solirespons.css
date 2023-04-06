@@ -1,0 +1,100 @@
+@media( max-width:455px){
+    .registroItem{
+        width:410px;
+        }
+
+    .imgAluno{
+        width: 70px;
+    }
+
+    th{
+        font-size: 15px;
+    }
+    .sumir{
+        display: none;
+    }
+
+    #modalRegistro{
+        width: 412px;
+        height: 100%;
+
+    }
+    #modalRegistro #imgAluno{
+        width: 60px;
+        margin-bottom: 10px;
+        align-self: flex-start;
+        margin-left: 30px;
+        
+    }
+    #modalRegistro #nomeAluno{
+        font-size: 25px;
+        font-weight: 500;
+        font-size: 10px;
+        width: 140px;
+        justify-self: flex-start;
+        
+
+    }
+  
+
+    #botaoFechar{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        left: 390px;
+        margin: 0;
+        padding: 0px 10px;
+        border-radius: 100%;
+        background-color: white;
+        transition: all 0.2s ease-in-out;
+    }
+
+        #botaoFechar:hover{
+            background-color: #fd0026;
+            color: white;
+        }
+
+        #modalRegistro .itemCadastral{
+           display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            margin-left: -30px;
+            align-self: center;
+                  
+        }
+    
+            .itemCadastral span{
+                cursor: default;
+                font-size: 10px;
+              
+            }
+    
+            .itemCadastral span:hover{
+                color: rgb(139, 187, 255);
+            }
+
+           
+    
+        #modalRegistro .icone{
+            width: 23px;
+            
+            
+        }
+    
+        #modalRegistro #colunaFoto{
+            margin-left: 20px;
+            margin-top: 10px;
+            flex-direction: row;
+            height: 50px;
+            width: 50px;
+            
+        }
+
+        .junto{
+            display: flex;
+            flex-direction: column;
+        }
+
+      
+
+    }

@@ -325,11 +325,10 @@ th { text-transform: uppercase; }
         }
 
     #modalRegistro .itemCadastral{
-        display: flex;
         flex-direction: row;
-        align-items: center;
-
-        margin-top: 8px;
+        padding: 23px;
+        margin: 0 auto;
+        
     }
 
         .itemCadastral span{
@@ -342,7 +341,7 @@ th { text-transform: uppercase; }
 
     #modalRegistro .icone{
         width: 23px;
-        margin-right: 12px;
+        flex-direction: row;
     }
 
     #modalRegistro .coluna{
@@ -452,4 +451,5 @@ th { text-transform: uppercase; }
         padding: 5px;
         margin-top: 30px;
     }
+
 
