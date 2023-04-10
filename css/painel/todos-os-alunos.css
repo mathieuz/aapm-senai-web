@@ -67,9 +67,12 @@ th { text-transform: uppercase; }
     flex-direction: row;
 
     width: 820px;
+    margin: 0;
+    padding: 0;
 
-    position: absolute;
-    top: 20%;
+    position: fixed;
+    bottom: 180px;
+
     background-color: white;
     box-shadow: 1px 1px 5000px 5000px rgba(0, 0, 0, 0.486);
     border-radius: 10px;
@@ -161,6 +164,8 @@ th { text-transform: uppercase; }
         font-weight: 500;
         margin-left: 3px;
         margin-bottom: 8px;
+
+        text-align: center;
 
         width: 310px;
     }

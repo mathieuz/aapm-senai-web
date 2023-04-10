@@ -146,10 +146,23 @@ for (let i = 0; i < arrayRegistro.length; i++){
         })
 
         modalRegistro.style.display = "flex"
+        sectionRegistro.style.pointerEvents = "none"
+
+        setTimeout(() => {
+          sectionRegistro.onclick = () => {
+            modalRegistro.style.display = "none"
+            imgAluno.src = "../../img/icones/icon-foto-perfil.png"
+
+            sectionRegistro.style.pointerEvents = "all"
+          }
+        }, 500)
     })
 }
 
-/*Adicionando evento de fechar janela no elemento de fechar janela.*/
+/*Adicionando evento de fechar janela no elemento de fechar janela no botão.*/
 document.getElementById("botaoFechar").addEventListener("click", () => {
     modalRegistro.style.display = "none"
+    imgAluno.src = "../../img/icones/icon-foto-perfil.png"
+
+    sectionRegistro.style.pointerEvents = "all"
 })
