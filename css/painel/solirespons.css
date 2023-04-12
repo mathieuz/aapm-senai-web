@@ -1,6 +1,6 @@
-@media(max-width:455px){
+@media(max-width: 100px){
     .registroItem{
-        width:368px;
+        width:308px;
         }
 
     .imgAluno{
@@ -15,7 +15,7 @@
     }
 
     #modalRegistro{
-        width: 370px;
+        width: px;
         height: 100%;
         margin: 0 auto;
 
