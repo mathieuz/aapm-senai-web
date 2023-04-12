@@ -190,7 +190,7 @@
     }
     }
 
-    @media ((min-width:450) and (max-width:880px)){
+   @media (max-width:510px){
         .registroItem{
             width:368px;
             }
@@ -202,30 +202,30 @@
         th{
             font-size: 15px;
         }
-        .sumir{
+        .sumir:nth-child(3){
             display: none;
         }
     
         #modalRegistro{
-            width: 370px;
-            height: 100%;
+            width: 95%;
+            height: 52%;
             margin: 0 auto;
     
         }
         #modalRegistro #imgAluno{
-            width: 60px;
+            width: 70px;
             margin-bottom: 10px;
-            align-self: flex-start;
-            margin-left: 30px;
+    
+            
             
         }
         #modalRegistro #nomeAluno{
             font-size: 25px;
             font-weight: 500;
             font-size: 10px;
-            width: 140px;
+            width: 160px;
             justify-self: flex-start;
-            margin-left: 10px;
+            margin-left: 20px;
     
         }
       
@@ -233,8 +233,7 @@
         #botaoFechar{
             display: block;
             cursor: pointer;
-            position: absolute;
-            left: 350px;
+            left: 95%;
             margin: 0;
             padding: 0px 10px;
             border-radius: 100%;
@@ -251,7 +250,7 @@
                display: flex;
                 flex-direction: column;
                 margin-top: 70px;
-                margin-left: -35px;
+                margin-left: -15px;
                 align-self: center;
                       
             }
@@ -306,7 +305,7 @@
                 padding-left: 2px;
                 margin-top: 50px;
                 margin-left: 10px;
-                width: 150px;
+                width: 198px;
         
                 border: 2px solid gray;
                 border-radius: 3px;
@@ -359,7 +358,7 @@
                 display: flex;
                 flex-direction: column;
                 margin-top: 60px;
-                margin-left: -32%;
+                margin-left: -28%;
            
             }
     
@@ -374,10 +373,205 @@
             border-color: #f01313;
             color: white;
             border-radius: none;
-            width: 98%;
+            width: 96%;
             padding: 5px;
             margin-top: 30px;
-            margin-left: -29%;
+            margin-left: -25%;
+    
+        }
+        
+        
+    }
+    /*===========================================================================================================*/
+
+    @media (max-width:930px){
+        .registroItem{
+            width:100%;
+            }
+    
+        .imgAluno{
+            width: 70px;
+        }
+    
+        th{
+            font-size: 15px;
+        }
+
+            .sumir:nth-child(4), .sumir:nth-child(5){
+                display: none;
+            }
+    
+        #modalRegistro{
+            width: 95%;
+            height: 52%;
+            margin: 0 auto;
+    
+        }
+        #modalRegistro #imgAluno{
+            width: 70px;
+            margin-bottom: 10px;
+    
+            
+            
+        }
+        #modalRegistro #nomeAluno{
+            font-size: 25px;
+            font-weight: 500;
+            font-size: 10px;
+            width: 160px;
+            justify-self: flex-start;
+            margin-left: 20px;
+    
+        }
+      
+    
+        #botaoFechar{
+            display: block;
+            cursor: pointer;
+            left: 95%;
+            margin: 0;
+            padding: 0px 10px;
+            border-radius: 100%;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+        }
+    
+            #botaoFechar:hover{
+                background-color: #fd0026;
+                color: white;
+            }
+    
+            #modalRegistro .itemCadastral{
+               display: flex;
+                flex-direction: column;
+                margin-top: 70px;
+                margin-left: -15px;
+                align-self: center;
+                      
+            }
+        
+                .itemCadastral span{
+                    cursor: default;
+                    font-size: 10px;
+                  
+                }
+        
+                .itemCadastral span:hover{
+                    color: rgb(139, 187, 255);
+                }
+    
+               
+        
+            #modalRegistro .icone{
+                width: 23px;
+                
+                
+            }
+        
+            #modalRegistro #colunaFoto{
+                margin-left: 2px;
+                margin-top: 10px;
+                flex-direction: row;
+                height: 20px;
+                width: 50px;
+                
+            }
+    
+            .junto{
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .divInput{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 7px;
+                
+            }
+        
+                .divInput:last-child{
+                    margin-bottom: auto;
+                }
+        
+            .divInput input{
+                cursor: auto;
+                padding-top: 10px;
+                padding-bottom: 8px;
+                padding-left: 2px;
+                margin-top: 50px;
+                margin-left: 10px;
+                width: 198px;
+        
+                border: 2px solid gray;
+                border-radius: 3px;
+                outline: transparent;
+        
+                transition: all ease-in-out 0.2s;
+            }
+        
+                .divInput input:hover{
+                    border-color: rgb(155 194 249);
+                }
+        
+            main input[type=date]{
+                padding-top: 10px;
+                padding-bottom: 6px;
+                padding-left: 8px;
+        
+                width: auto;
+        
+                border: 2px solid gray;
+                border-radius: 3px;
+                outline: transparent;
+        
+                transition: all ease-in-out 0.2s;
+            }
+        
+            .divInput label{
+                pointer-events: none;
+        
+                margin-left: 14px;
+                margin-top: 35px;
+        
+                padding-left: 4px;
+                padding-right: 4px;
+                background-color: white;
+                font-weight: 600;
+        
+                transition: all 0.2s ease-in-out;
+            }
+        
+            .divInput input:hover + label{
+                color: rgb(155 194 249);
+            }
+        
+            .inputDados{
+                margin-top: 10px;
+            }
+    
+            .descer{
+                display: flex;
+                flex-direction: column;
+                margin-top: 60px;
+                margin-left: -28%;
+           
+            }
+    
+            .lado{
+                display: flex;
+                flex-direction: row;
+            }
+    
+            
+        #confirmar{
+            background-color: #f01313;
+            border-color: #f01313;
+            color: white;
+            border-radius: none;
+            width: 96%;
+            padding: 5px;
+            margin-top: 30px;
+            margin-left: -25%;
     
         }
         
