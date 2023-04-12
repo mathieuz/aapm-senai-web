@@ -190,7 +190,7 @@
     }
     }
 
-   @media (max-width:510px){
+   @media (max-width:500px){
         .registroItem{
             width:368px;
             }
@@ -208,12 +208,12 @@
     
         #modalRegistro{
             width: 95%;
-            height: 52%;
+            height: 100%;
             margin: 0 auto;
     
         }
         #modalRegistro #imgAluno{
-            width: 70px;
+            width: 10 px;
             margin-bottom: 10px;
     
             
@@ -223,7 +223,7 @@
             font-size: 25px;
             font-weight: 500;
             font-size: 10px;
-            width: 160px;
+            width: 150px;
             justify-self: flex-start;
             margin-left: 20px;
     
