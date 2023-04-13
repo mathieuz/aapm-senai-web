@@ -1,0 +1,52 @@
+/*Media Query Modal*/
+
+@media (max-width: 905px){
+    #modalRegistro{
+        flex-direction: column;
+        bottom: 40px;
+        width: auto;
+    }
+
+    #imgAluno{
+        width: 140px!important;
+        height: 140px!important;
+    }
+
+    #nomeAluno{
+        align-self: center;
+    }
+
+    .coluna, #colunaFoto{
+        margin: 20px!important;
+    }
+
+    #colunaFoto{
+        margin-bottom: 5px!important;
+    }
+
+    .itemCadastral{
+        width: 100%;
+    }
+
+    #botaoFechar{
+        left: 385px;
+    }
+}
+
+/**/
+/**/
+/**/
+
+/*Media Query Registro*/
+
+@media (max-width: 1000px){
+    th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5){
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    th:nth-child(3), td:nth-child(3){
+        display: none;
+    }
+}
