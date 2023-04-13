@@ -3,7 +3,7 @@
 @media (max-width: 905px){
     #modalRegistro{
         flex-direction: column;
-        bottom: 40px;
+        bottom: 25px;
         width: auto;
     }
 

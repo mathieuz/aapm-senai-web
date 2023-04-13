@@ -143,5 +143,101 @@ main{
         }
 
             header #senaiLogo{
+                z-index: 1;
                 width: 100px;
+            }
+
+            header #aapm{
+                user-select: none;
+                -webkit-user-select: none;
+                -webkit-user-drag: none;
+
+                font-size: 25px;
+                font-weight: 200px;
+                margin-left: 6px;
+
+                animation: aapm ease-in-out 1s;
+            }
+
+            @keyframes aapm{
+                from{
+                    margin-left: -90px;
+                }
+            }
+
+        header #imgIconAdmin{
+            cursor: pointer;
+
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+        }
+
+        header #modalPerfil{
+            display: none;
+
+            flex-direction: column;
+            position: fixed;
+            right: 5px;
+            top: 45px;
+
+            padding: 15px;
+
+            background: white;
+            border-radius: 6px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.308);
+        }
+
+        header #nomeAdmin{
+            font-weight: 300;
+        }
+
+            #imgAdmin{
+                width: 90px;
+                height: 90px;
+            }
+
+            #btnVerPerfil{
+                cursor: pointer;
+
+                margin-top: 20px;
+                border: 2px solid red;
+                padding: 8px;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-radius: 6px;
+
+                color: red;
+                font-weight: 700;
+
+                background-color: white;
+
+                transition: all ease-in-out 0.2s;
+            }
+
+            #btnVerPerfil:hover{
+                background-color: red;
+                color: white;
+            }
+
+            #btnLogout{
+                cursor: pointer;
+
+                margin-top: 15px;
+                border: 2px solid transparent;
+                padding: 8px;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-radius: 6px;
+
+                color: rgb(141, 141, 141);
+                font-weight: 700;
+
+                background-color: white;
+
+                transition: all ease-in-out 0.2s;
+            }
+
+            #btnLogout:hover{
+                border-color: rgb(141, 141, 141);
             }
