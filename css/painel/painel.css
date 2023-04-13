@@ -45,6 +45,10 @@ nav{
     background-blend-mode: color;
     background-color: rgb(255, 0, 0);
 
+    box-shadow: 10px 0px 1000px 5000px rgba(0, 0, 0, 0);
+
+    z-index: 3;
+
     transition: all ease-in-out 0.5s;
 
     width: auto;
@@ -102,6 +106,10 @@ nav{
             transition: all 0.4s;
         }
 
+    nav:hover{
+        box-shadow: 10px 0px 1000px 5000px rgba(0, 0, 0, 0.541);
+    }
+
     nav:hover > a div .spanLinkNav, nav:hover > div .spanLinkNav{
         color: white;
         font-size: 95%;
@@ -129,6 +137,10 @@ main{
         align-items: center;
         justify-content: space-between;
 
+        z-index: 2;
+
+        background-color: white;
+
         width: auto;
 
         box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.295);
@@ -143,7 +155,7 @@ main{
         }
 
             header #senaiLogo{
-                z-index: 1;
+                z-index: 4;
                 width: 100px;
             }
 
@@ -174,7 +186,7 @@ main{
         }
 
         header #modalPerfil{
-            display: none;
+            display: flex;
 
             flex-direction: column;
             position: fixed;
@@ -224,7 +236,7 @@ main{
                 cursor: pointer;
 
                 margin-top: 15px;
-                border: 2px solid transparent;
+                border: 1px solid transparent;
                 padding: 8px;
                 padding-left: 40px;
                 padding-right: 40px;

@@ -46,8 +46,6 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
     let inputEmailInstitucional = document.getElementById("inputEmailInstitucional").value
     let inputSenha = document.getElementById("inputSenha").value
 
-    /*Verificação dos Inputs.*/
-
     /*Verificação Matrícula*/
     if (matriculaRegex.test(inputNumeroDaMatricula) === true){
         arrayInput[0].classList.remove("alertaInput")
