@@ -1,0 +1,76 @@
+input[type=file]{
+    display: none;
+}
+
+#btnAlterarFoto{
+    position: absolute;
+    align-self: center;
+    top: 220px;
+    margin-left: 140px;
+    cursor: pointer;
+    z-index: 2;
+
+    transition: all ease-in-out 0.2s;
+}
+
+    #btnAlterarFoto:hover{
+        filter: brightness(1.5);
+    }
+
+#imgPerfil{
+    object-fit: cover;
+    align-self: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-color: white;
+    z-index: 1;
+
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.329);
+    padding: 10px;
+}
+
+main{
+    align-self: center;
+    padding: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+    border-radius: 10px;
+    margin-top: -40px;
+
+    width: 900px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+    .colunaConteudo{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .colunaConteudo .divItem{
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+        }
+
+        .colunaConteudo .divItem .icone{
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+
+            margin-bottom: 6px;
+        }
+
+            .divItem:last-child{
+                margin-bottom: auto;
+            }
+
+    #nomeAdmin{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+
+        margin-bottom: 20px;
+    }

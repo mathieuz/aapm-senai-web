@@ -118,9 +118,19 @@ th { text-transform: uppercase; }
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
 
         margin-top: 8px;
     }
+
+        #modalRegistro .itemCadastral div{
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
 
         .itemCadastral span{
             cursor: default;
@@ -168,6 +178,21 @@ th { text-transform: uppercase; }
         text-align: center;
 
         width: 310px;
+    }
+
+    #modalRegistro #divbotaoAlterar{
+        border-radius: 100%;
+        padding: 100px;
+    }
+
+        #botaoAlterar{
+            width: 30px;
+            height: 30px;
+        }
+
+    #botaoAlterar, #divBotaoAlterar{
+        cursor: pointer;
+        position: absolute;
     }
 
     /**/

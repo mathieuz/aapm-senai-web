@@ -12,7 +12,7 @@ let spanLinkNav = document.getElementsByClassName("spanLinkNav")
 //Todos os elementos de link receberão um event-listener. O valor passado, dependendo do que o usuário escolher, vai determinar a página de seção conforme o link clicado dentro do switch.
 
 for (let i = 0; i < arrayLinkNav.length; i++){
-    document.getElementsByClassName("linkNav")[i].addEventListener("click", () => {
+    document.getElementsByClassName("linkNav")[i].addEventListener("click", function routerPainel(){
         var linkSecao = spanLinkNav[i].innerHTML.toLowerCase()
 
         switch (linkSecao){
@@ -22,6 +22,10 @@ for (let i = 0; i < arrayLinkNav.length; i++){
 
             case "cadastrar aluno":
                 iframe.src = "html/painel/cadastrar-aluno.html"
+            break
+
+            case "solicitações":
+                iframe.src = "html/painel/solicitacoes.html"
             break
 
             case "solicitações":
