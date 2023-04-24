@@ -1,4 +1,4 @@
-@media(max-width:455px){
+@media(max-width:500px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -17,13 +17,13 @@
         }
 
     .imgAluno{
-        width: 70px;
+        width: 100px;
     }
 
     th{
         font-size: 15px;
     }
-    .sumir{
+    .sumir:nth-child(3), :nth-child(4), :nth-child(5){
         display: none;
     }
 
@@ -204,9 +204,9 @@
     }
 
 
-    /*===========================================================================================================*/
+    /*===========================================================================================================
 
-    @media(max-width:580px){
+    @media(max-width:500px){
         .registroItem{
             display: flex;
             flex-direction: row;
@@ -231,7 +231,7 @@
         th{
             font-size: 15px;
         }
-        .sumir:nth-child(4), :nth-child(5){
+        .sumir:nth-child(3), :nth-child(4), :nth-child(5){
             display: none;
         }
     
