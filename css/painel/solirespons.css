@@ -104,10 +104,6 @@
             
         }
 
-        .junto{
-            display: flex;
-            flex-direction: column;
-        }
 
         .divInput{
             display: flex;
@@ -315,7 +311,7 @@
         .divInput{
             display: flex;
             flex-direction: column;
-            margin-left: 4%;
+            margin-left: 5%;
         }
     
         .divInput input{
@@ -382,9 +378,9 @@
         background-color: #f01313;
         border-color: #f01313;
         color: white;
-        border-radius: none;
-        width: 100%;
-        margin-left: -24%;
+        border-radius: 5px;
+        width: 106%;
+        margin-left: -28%;
     }
     
 

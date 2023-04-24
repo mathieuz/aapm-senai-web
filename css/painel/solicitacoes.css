@@ -446,7 +446,7 @@ th { text-transform: uppercase; }
         background-color: #f01313;
         border-color: #f01313;
         color: white;
-        border-radius: none;
+        border-radius: 5px;
         width: 100%;
         padding: 5px;
         margin-top: 30px;
