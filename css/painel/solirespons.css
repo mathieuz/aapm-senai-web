@@ -6,201 +6,6 @@
         cursor: pointer;
     
         padding: 5px;
-        width: 90%;
-        border-radius: 10px;
-        margin-bottom: 15px;
-    
-        box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.253);
-        background-color: white;
-    
-        transition: all ease-in-out 0.1s;
-        }
-
-    .imgAluno{
-        width: 70px;
-    }
-
-    th{
-        font-size: 15px;
-    }
-    .sumir{
-        display: none;
-    }
-
-    #modalRegistro{
-        width: 95%;
-        height: 88%;
-        margin: 0 auto;
-
-    }
-    #modalRegistro #imgAluno{
-        width: 60px;
-        margin-left: 40%;
-
-    }
-    #modalRegistro #nomeAluno{
-        font-weight: 500;
-        font-size: 10px;
-        width: 200px;
-        justify-self: flex-start;
-        margin: auto;
-        margin-left: 15%;
-
-    }
-  
-  
-
-    #botaoFechar{
-        display: block;
-        cursor: pointer;
-        left: 395px;
-        margin: 0;
-        border-radius: 100%;
-        background-color: white;
-        transition: all 0.2s ease-in-out;
-    }
-
-        #botaoFechar:hover{
-            background-color: #fd0026;
-            color: white;
-        }
-
-        #modalRegistro .itemCadastral{
-            display: flex;
-            flex-direction: column;
-            margin: -60%;
-            margin-top: 90%;
-            align-self: center;
-            margin-left:70%;
-                  
-        }
-    
-            .itemCadastral span{
-                cursor: default;
-                font-size: 10px;
-              
-            }
-    
-            .itemCadastral span:hover{
-                color: rgb(139, 187, 255);
-            }
-
-           
-    
-        #modalRegistro .icone{
-            width: 23px;            
-        }
-    
-        #modalRegistro #colunaFoto{
-            margin-left: 2px;
-            margin-top: 10px;
-            flex-direction: row;
-            height: 20px;
-            width: 50px;
-            
-        }
-
-
-        .divInput{
-            display: flex;
-            flex-direction: column;
-            margin-left: 3%;
-            
-        }
-    
-            .divInput:last-child{
-                margin-bottom: auto;
-            }
-    
-        .divInput input{
-            cursor: auto;     
-            margin-top: 50px;
-            margin-left: 10px;
-            width: 170px;
-    
-            border: 2px solid gray;
-            border-radius: 3px;
-            outline: transparent;
-    
-            transition: all ease-in-out 0.2s;
-        }
-    
-            .divInput input:hover{
-                border-color: rgb(155 194 249);
-            }
-    
-        main input[type=date]{
-            padding-top: 10px;
-            padding-bottom: 6px;
-            padding-left: 8px;
-    
-            width: auto;
-    
-            border: 2px solid gray;
-            border-radius: 3px;
-            outline: transparent;
-    
-            transition: all ease-in-out 0.2s;
-        }
-    
-        .divInput label{
-            pointer-events: none;
-    
-            margin-left: 4%;
-            margin-top: 35px;
-    
-            padding-left: 4px;
-            padding-right: 4px;
-            background-color: white;
-            font-weight: 600;
-    
-            transition: all 0.2s ease-in-out;
-        }
-    
-        .divInput input:hover + label{
-            color: rgb(155 194 249);
-        }
-    
-        .inputDados{
-            margin-top: 10px;
-        }
-
-        .descer{
-            display: flex;
-            flex-direction: column;
-            margin-top: 60px;
-            margin-left: -32%;
-        }
-
-        .lado{
-            display: flex;
-            flex-direction: row;
-        }
-
-        
-    #confirmar{
-        background-color: #f01313;
-        border-color: #f01313;
-        color: white;
-        width: 100%;
-        padding: 5px;
-        margin-top: 2%;
-        margin-left: -27%;
-
-    }
-    }
-
-
-    /*===========================================================================================================*/
-    @media(min-width: 500px) and (max-width:5550px){
-
-    .registroItem{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        cursor: pointer;
-    
-        padding: 5px;
         width: auto;
         border-radius: 10px;
         margin-bottom: 15px;
@@ -224,7 +29,7 @@
 
     #modalRegistro{
         width: 96%;
-        height: 55%;
+        height: 85%;
         margin: 0 auto;
 
     }
@@ -261,7 +66,7 @@
         }
 
         #modalRegistro .itemCadastral{
-           display: flex;
+            display: flex;
             flex-direction: column;
             margin: auto;
             align-self: center;
@@ -298,7 +103,195 @@
         .junto{
             display: flex;
             flex-direction: column;
+        }
+
+        .divInput{
+            display: flex;
+            flex-direction: column;
+            margin-left: 4%;
+            margin-bottom: 1%;
+        }
+    
+        .divInput input{
+            cursor: auto;
+            margin-top: 24%;
+            width: 180px;
+    
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+    
+            transition: all ease-in-out 0.2s;
+        }
+    
+            .divInput input:hover{
+                border-color: rgb(155 194 249);
+            }
+    
+        main input[type=date]{
+            padding-top: 10px;
+            padding-bottom: 6px;
+            padding-left: 8px;
+    
+            width: auto;
+    
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+    
+            transition: all ease-in-out 0.2s;
+        }
+    
+        .divInput label{
+            pointer-events: none;
+            margin-left: 2%;
+            margin-top: 8%;
+            background-color: white;    
+            transition: all 0.2s ease-in-out;
+        }
+    
+        .divInput input:hover + label{
+            color: rgb(155 194 249);
+        }
+    
+        .inputDados{
+            margin-top: 10px;
+        }
+
+        .descer{
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+            margin-left: -32%;
+       
+        }
+
+        .lado{
+            display: flex;
+            flex-direction: row;
+        }
+
         
+    #confirmar{
+        background-color: #f01313;
+        border-color: #f01313;
+        color: white;
+        border-radius: 5px;
+        width: 106%;
+        margin-left: -30%;
+    }
+    
+
+}
+
+
+    /*===========================================================================================================*/
+    @media(min-width: 471px) and (max-width:550px){
+
+    .registroItem{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    
+        padding: 5px;
+        width: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    
+        box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.253);
+        background-color: white;
+    
+        transition: all ease-in-out 0.1s;
+        }
+
+    .imgAluno{
+        width: 70px;
+    }
+
+    th{
+        font-size: 15px;
+    }
+    .sumir{
+        display: none;
+    }
+
+    #modalRegistro{
+        width: 96%;
+        height: 90%;
+        margin: 0 auto;
+
+    }
+    #modalRegistro #imgAluno{
+        margin: 0 auto;
+        width: 55%;
+        
+    }
+    #modalRegistro #nomeAluno{
+        font-size: 25px;
+        font-weight: 500;
+        font-size: 10px;
+        width: 130px;
+        justify-self: flex-start;
+        margin: auto;
+        margin-left: 15%;
+
+    }
+   
+  
+
+    #botaoFechar{
+        display: block;
+        cursor: pointer;
+        left: 94%;
+        border-radius: 100%;
+        background-color: white;
+        transition: all 0.2s ease-in-out;
+    }
+
+        #botaoFechar:hover{
+            background-color: #fd0026;
+            color: white;
+        }
+
+        #modalRegistro .itemCadastral{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            align-self: center;
+                  
+        }
+    
+            .itemCadastral span{
+                cursor: default;
+                font-size: 10px;
+              
+            }
+    
+            .itemCadastral span:hover{
+                color: rgb(139, 187, 255);
+            }
+
+           
+    
+        #modalRegistro .icone{
+            width: 23px;
+            
+            
+        }
+    
+        #modalRegistro #colunaFoto{
+            margin-left: 2px;
+            margin-top: 10px;
+            flex-direction: row;
+            height: 20px;
+            width: 50px;
+            
+        }
+
+        .junto{
+            display: flex;
+            flex-direction: column;
         }
 
         .divInput{
