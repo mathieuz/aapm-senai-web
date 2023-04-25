@@ -6,7 +6,7 @@
         cursor: pointer;
     
         padding: 5px;
-        width: auto;
+        width: 90%;
         border-radius: 10px;
         margin-bottom: 15px;
     
@@ -262,7 +262,6 @@
         #botaoFechar{
             display: block;
             cursor: pointer;
-            position: absolute;
             left: 95%;
             margin: 0;
             padding: 0px 10px;
