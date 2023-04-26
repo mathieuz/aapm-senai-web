@@ -33,6 +33,11 @@
     #botaoFechar{
         left: 385px;
     }
+
+    #botaoEditar{
+        left: 380px;
+        bottom: -15px;
+    }
 }
 
 /**/

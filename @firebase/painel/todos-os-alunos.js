@@ -148,6 +148,9 @@ for (let i = 0; i < arrayRegistro.length; i++){
         modalRegistro.style.display = "flex"
         sectionRegistro.style.pointerEvents = "none"
 
+        //Adicionando função de edição no modal.
+        document.getElementById("botaoEditar").addEventListener("click", editarInfo)
+
         setTimeout(() => {
           sectionRegistro.onclick = () => {
             modalRegistro.style.display = "none"
@@ -166,3 +169,12 @@ document.getElementById("botaoFechar").addEventListener("click", () => {
 
     sectionRegistro.style.pointerEvents = "all"
 })
+
+/*Função edição.*/
+function editarInfo(){
+  let input = document.getElementById("itemCadastral")
+
+  for (let i = 0; i < document.getElementById("itemCadastral").length; i++){
+
+  }
+}

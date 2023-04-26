@@ -376,7 +376,10 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
                     dataDeConclusaoCurso: `${inputDataDeConclusao}`,
                     numArmario: `${inputNumArmario}`,
                     voucher: `${inputVoucher}`,
-                    email: `${inputEmailInstitucional}`
+                    email: `${inputEmailInstitucional}`,
+                    config: {
+                        notificacoes: true
+                    }
                 });
 
             })

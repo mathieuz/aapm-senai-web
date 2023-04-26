@@ -136,10 +136,6 @@ th { text-transform: uppercase; }
             cursor: default;
         }
 
-        .itemCadastral span:hover{
-            color: rgb(139, 187, 255);
-        }
-
     #modalRegistro .icone{
         width: 23px;
         margin-right: 12px;
@@ -186,14 +182,41 @@ th { text-transform: uppercase; }
     }
 
         #botaoAlterar{
-            width: 30px;
-            height: 30px;
+            position: absolute;
+
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+            padding: 3px;
+            border-radius: 100%;
+
+            transition: all ease-in-out 0.2s;
         }
 
     #botaoAlterar, #divBotaoAlterar{
         cursor: pointer;
         position: absolute;
     }
+
+    #botaoEditar{
+        position: absolute;
+        left: 795px;
+        bottom: -15px;
+
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        padding: 8px;
+        border-radius: 100%;
+
+        background-color: white;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        #botaoEditar:hover{
+            background-color: lightgreen;
+        }
 
     /**/
 
