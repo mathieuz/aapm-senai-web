@@ -46,6 +46,9 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
     let inputEmailInstitucional = document.getElementById("inputEmailInstitucional").value
     let inputSenha = document.getElementById("inputSenha").value
 
+    inputDataDeNascimento = String(inputDataDeNascimento)
+    let dataNascimento = `${inputDataDeNascimento[8]}${inputDataDeNascimento[9]}/${inputDataDeNascimento[5]}${inputDataDeNascimento[6]}/${inputDataDeNascimento[0]}${inputDataDeNascimento[1]}${inputDataDeNascimento[2]}${inputDataDeNascimento[3]}`
+
     /*Verificação Matrícula*/
     if (matriculaRegex.test(inputNumeroDaMatricula) === true){
         arrayInput[0].classList.remove("alertaInput")
@@ -365,7 +368,7 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
                 addDoc(collection(db, "Aluno"), {
                     numMatricula: `${inputNumeroDaMatricula}`,
                     nome: `${inputNome}`,
-                    dataDeNascimento: `${inputDataDeNascimento}`,
+                    dataDeNascimento: `${dataNascimento}`,
                     cpf: `${inputCpf}`,
                     telefone: `${inputTelefone}`,
                     categoria: `${inputCategoria}`,
