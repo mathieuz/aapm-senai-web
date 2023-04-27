@@ -1,6 +1,6 @@
 import { db, storage } from "../module.js"
 
-import { getDocs, collection, query, where } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getDocs, collection, query, where, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
 
@@ -84,7 +84,7 @@ arrayDocumentos.forEach(doc => {
             imgAluno.src = `${url}`
           })
           .catch((error) => {
-            console.log(error)
+
           });
 
     } catch {}
@@ -128,6 +128,8 @@ for (let i = 0; i < arrayRegistro.length; i++){
             document.getElementById("numArmario").value = doc.get("numArmario")
             document.getElementById("voucher").value = doc.get("voucher")
 
+            document.getElementById("idAluno").value = doc.id
+
             try{
 
                 //Adiciona imagem.
@@ -139,7 +141,7 @@ for (let i = 0; i < arrayRegistro.length; i++){
                     imgAluno.src = `${url}`
                   })
                   .catch((error) => {
-                    console.log(error)
+                    
                   });
         
             } catch {}
@@ -172,9 +174,45 @@ document.getElementById("botaoFechar").addEventListener("click", () => {
 
 /*Função edição.*/
 function editarInfo(){
-  let input = document.getElementById("itemCadastral")
+  let btn = document.getElementById("botaoEditar")
 
-  for (let i = 0; i < document.getElementById("itemCadastral").length; i++){
+  let inputModal = document.getElementsByClassName("inputDados")
+  let spanItemCadastral = document.getElementsByClassName("spanItemCadastral")
 
+  for (let i = 0; i < spanItemCadastral.length; i++){
+    spanItemCadastral[i].setAttribute("contenteditable", "true")
   }
+
+  for (let i = 0; i < inputModal.length; i++){
+    inputModal[i].removeAttribute("readonly")
+    
+    btn.src = "../../img/icones/salvar.png"
+    btn.title = "Salvar Alterações"
+  }
+
+  btn.removeEventListener("click", editarInfo)
+
+  btn.addEventListener("click", async () => {
+    let idAluno = document.getElementById("idAluno").value
+
+    const salvarDados = doc(db, "Aluno", idAluno)
+    await updateDoc(salvarDados, {
+
+      nome: spanItemCadastral[0].innerHTML,
+      //email: spanItemCadastral[1].innerHTML,
+      telefone: spanItemCadastral[2].innerHTML,
+      curso: spanItemCadastral[3].innerHTML,
+      dataDeNascimento: spanItemCadastral[4].innerHTML,
+
+      numMatricula: inputModal[0].value,
+      turma: inputModal[1].value,
+      categoria: inputModal[2].value,
+      periodo: inputModal[3].value,
+      dataDeInicioCurso: inputModal[4].value,
+      dataDeConclusaoCurso: inputModal[5].value,
+      numArmario: inputModal[6].value,
+      voucher: inputModal[7].value
+
+    })
+  })
 }
