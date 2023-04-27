@@ -130,6 +130,7 @@ th { text-transform: uppercase; }
             align-items: center;
             margin: 0;
             padding: 0;
+            word-break: break-all;
         }
 
         .itemCadastral span{

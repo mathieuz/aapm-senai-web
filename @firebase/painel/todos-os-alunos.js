@@ -166,6 +166,9 @@ for (let i = 0; i < arrayRegistro.length; i++){
 
 /*Adicionando evento de fechar janela no elemento de fechar janela no botão.*/
 document.getElementById("botaoFechar").addEventListener("click", () => {
+    try{
+      document.getElementById("botaoEditar").removeEventListener("click", salvarInfo)
+    } catch {}
 
     modalRegistro.style.display = "none"
     imgAluno.src = "../../img/icones/icon-foto-perfil.png"
@@ -204,13 +207,18 @@ function editarInfo(){
 
   btn.removeEventListener("click", editarInfo)
 
-  //Salva as informações editadas e recarrega a página.
-  btn.addEventListener("click", async function salvarInfo (){
-    let idAluno = document.getElementById("idAluno").value
+  //Adiciona função de salvar as alterações.
+  btn.addEventListener("click", salvarInfo)
+}
+
+async function salvarInfo(){
+  let spanItemCadastral = document.getElementsByClassName("spanItemCadastral")
+  let inputModal = document.getElementsByClassName("inputDados")
+  
+  let idAluno = document.getElementById("idAluno").value
 
     const salvarDados = doc(db, "Aluno", idAluno)
     await updateDoc(salvarDados, {
-
       nome: spanItemCadastral[0].innerHTML,
       email: spanItemCadastral[1].innerHTML,
       telefone: spanItemCadastral[2].innerHTML,
@@ -231,5 +239,4 @@ function editarInfo(){
     alert("Informações alteradas com sucesso!")
 
     window.location.href = window.location.href
-  })
 }
