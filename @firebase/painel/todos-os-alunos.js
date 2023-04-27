@@ -166,10 +166,22 @@ for (let i = 0; i < arrayRegistro.length; i++){
 
 /*Adicionando evento de fechar janela no elemento de fechar janela no botão.*/
 document.getElementById("botaoFechar").addEventListener("click", () => {
+
     modalRegistro.style.display = "none"
     imgAluno.src = "../../img/icones/icon-foto-perfil.png"
 
     sectionRegistro.style.pointerEvents = "all"
+
+    document.getElementById("botaoEditar").src = "../../img/icones/icon-caneta.png"
+    document.getElementById("botaoEditar").title = "Editar Informações"
+
+    for (let i = 0; i < document.getElementsByClassName("spanItemCadastral").length; i++){
+      document.getElementsByClassName("spanItemCadastral")[i].removeAttribute("contenteditable")
+    }
+
+    for (let i = 0; i < document.getElementsByClassName("inputDados").length; i++){
+      document.getElementsByClassName("inputDados")[i].setAttribute("readonly", "true")
+    }
 })
 
 /*Função edição.*/
@@ -193,7 +205,7 @@ function editarInfo(){
   btn.removeEventListener("click", editarInfo)
 
   //Salva as informações editadas e recarrega a página.
-  btn.addEventListener("click", async () => {
+  btn.addEventListener("click", async function salvarInfo (){
     let idAluno = document.getElementById("idAluno").value
 
     const salvarDados = doc(db, "Aluno", idAluno)

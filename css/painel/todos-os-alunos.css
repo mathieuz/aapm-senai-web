@@ -176,6 +176,10 @@ th { text-transform: uppercase; }
         width: 310px;
     }
 
+    .spanItemCadastral{
+        cursor: auto!important;
+    }
+
     #modalRegistro #divbotaoAlterar{
         border-radius: 100%;
         padding: 100px;
