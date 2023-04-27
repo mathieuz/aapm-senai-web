@@ -1,4 +1,4 @@
-@media(max-width:470px){
+@media(max-width: 200px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -186,7 +186,7 @@
 
 
     /*===========================================================================================================*/
-    @media(min-width: 471px) and (max-width:550px){
+    @media(max-width:471px){
 
     .registroItem{
         display: flex;
@@ -218,23 +218,24 @@
 
     #modalRegistro{
         width: 96%;
-        height: 90%;
+        height: 70%;
         margin: 0 auto;
 
     }
     #modalRegistro #imgAluno{
-        margin: 0 auto;
+        margin-left: 185% ;
         width: 55%;
+        margin-top: 0%;
         
     }
     #modalRegistro #nomeAluno{
         font-size: 25px;
         font-weight: 500;
-        font-size: 10px;
-        width: 130px;
+        font-size: 14px;
+        width: 150px;
         justify-self: flex-start;
         margin: auto;
-        margin-left: 15%;
+        margin-left: 100%;
 
     }
    
@@ -297,7 +298,13 @@
         .divInput{
             display: flex;
             flex-direction: column;
-            margin-left: 5%;
+            margin-left: 6%;
+        }
+
+        .divTextArea{
+            display: flex;
+            flex-direction: column;
+            margin-left:6% ;
         }
     
         .divInput input{
@@ -311,11 +318,27 @@
     
             transition: all ease-in-out 0.2s;
         }
+
+        .divTextArea TextArea{
+            cursor: auto;
+            margin-top:10%;
+            width: 408px;
+
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+
+            transition: all ease-in-out 0.2s;
+        }
     
             .divInput input:hover{
                 border-color: rgb(155 194 249);
             }
-    
+
+            .divTextArea Textarea:hover{
+                border-color: rgb(155 194 249);
+            }
+
         main input[type=date]{
             padding-top: 10px;
             padding-bottom: 6px;
@@ -330,6 +353,29 @@
             transition: all ease-in-out 0.2s;
         }
     
+        main TextArea[type=text]{
+            padding-top: 10px;
+            padding-bottom: 6px;
+            padding-left: 8px;
+
+            width: auto;
+
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+
+            transition: all ease-in-out 0.2s;
+        }
+
+        textarea{
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        #labelArea{
+            margin-bottom: 10px;
+        }
+
         .divInput label{
             pointer-events: none;
             margin-left: 2%;
@@ -337,14 +383,30 @@
             background-color: white;    
             transition: all 0.2s ease-in-out;
         }
+
+        .divTextArea label{
+            pointer-events: none;
+            margin-left: 2.5%;
+            margin-top: 6%;
+            background-color: white;
+            width: 30%;
+            transition: all 0.2s ease-in-out;
+            
+        }
     
         .divInput input:hover + label{
             color: rgb(155 194 249);
         }
+
+        .divTextArea TextArea:hover + label{
+            color: rgb(155 194 249);
+        }
     
-        .inputDados{
+        .TextAreaDados{
             margin-top: 10px;
         }
+
+       
 
         .descer{
             display: flex;
@@ -365,8 +427,9 @@
         border-color: #f01313;
         color: white;
         border-radius: 5px;
-        width: 106%;
-        margin-left: -28%;
+        width: 101%;
+        margin-left: 5%;
+        margin-top: 8%;
     }
     
 
