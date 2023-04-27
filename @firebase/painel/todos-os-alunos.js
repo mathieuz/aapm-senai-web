@@ -192,6 +192,7 @@ function editarInfo(){
 
   btn.removeEventListener("click", editarInfo)
 
+  //Salva as informações editadas e recarrega a página.
   btn.addEventListener("click", async () => {
     let idAluno = document.getElementById("idAluno").value
 
@@ -199,7 +200,7 @@ function editarInfo(){
     await updateDoc(salvarDados, {
 
       nome: spanItemCadastral[0].innerHTML,
-      //email: spanItemCadastral[1].innerHTML,
+      email: spanItemCadastral[1].innerHTML,
       telefone: spanItemCadastral[2].innerHTML,
       curso: spanItemCadastral[3].innerHTML,
       dataDeNascimento: spanItemCadastral[4].innerHTML,
@@ -214,5 +215,9 @@ function editarInfo(){
       voucher: inputModal[7].value
 
     })
+
+    alert("Informações alteradas com sucesso!")
+
+    window.location.href = window.location.href
   })
 }
