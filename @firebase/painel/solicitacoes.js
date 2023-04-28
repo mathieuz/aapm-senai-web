@@ -12,7 +12,7 @@ arrayDocumentos.forEach(async (d) => {
     const docSolicitacao = await getDoc(solicitacao)
 
     if (docSolicitacao.exists()) {
-        console.log("Subcoleção:", docSolicitacao.data());
+        console.log("Subcoleção:", docSolicitacao.data())
 
         let sectionRegistro = document.getElementById("sectionRegistro")
 
@@ -99,6 +99,8 @@ arrayDocumentos.forEach(async (d) => {
               });
     
         } catch {}
+
+        registroItem.addEventListener("click", abrirModal)
 
     }
 });
