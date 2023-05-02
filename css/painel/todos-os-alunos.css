@@ -1,3 +1,37 @@
+body, html{
+    height: 100%;
+}
+
+#divBarraDePesquisa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: 18px;
+    margin-right: 20px;
+
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px 3px rgba(0, 0, 0, 0.134);
+}
+
+    .barra{
+        padding: 12px;
+    }
+
+    #icoBusca{
+        width: 25px;
+        height: 25px;
+    }
+
+    #barraDePesquisa{
+        width: 95%;
+        padding: 4px;
+        outline: none;
+        border-color: transparent;
+    }
+
 #sectionRegistro{
     margin: 20px;
     padding: 0;
@@ -62,14 +96,16 @@ th { text-transform: uppercase; }
 
 #modalRegistro{
     align-self: center;
+    justify-self: center;
 
     display: none;
     flex-direction: row;
 
     width: 820px;
     margin: 0;
-    margin-top: 180px;
     padding: 0;
+
+    bottom: 150px;
 
     position: fixed;
 
