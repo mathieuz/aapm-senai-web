@@ -27,6 +27,7 @@ body, html{
     }
 
     #filtro{
+        cursor: pointer;
         border-color: transparent;
         outline: none;
     }
