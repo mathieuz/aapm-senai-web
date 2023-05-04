@@ -186,7 +186,7 @@
 
 
     /*===========================================================================================================*/
-    @media(max-width:471px){
+    @media(max-width:700px){
 
     .registroItem{
         display: flex;
@@ -217,25 +217,25 @@
     }
 
     #modalRegistro{
-        width: 96%;
-        height: 70%;
-        margin: 0 auto;
-
+        width: 450px;
+        height: 700px;
+        margin-top: -70px;
     }
     #modalRegistro #imgAluno{
-        margin-left: 185% ;
-        width: 55%;
+        margin-left: 150px ;
+        width: 130px;
+        height: 130px;
         margin-top: 0%;
         
     }
     #modalRegistro #nomeAluno{
         font-size: 25px;
         font-weight: 500;
-        font-size: 14px;
-        width: 150px;
+        font-size: 10px;
+        width: 300px;
         justify-self: flex-start;
         margin: auto;
-        margin-left: 100%;
+        margin-left: 15%;
 
     }
    
@@ -411,8 +411,8 @@
         .descer{
             display: flex;
             flex-direction: column;
-            margin-top: 60px;
-            margin-left: -32%;
+            margin-top: 70px;
+            margin-left: -125px;
        
         }
 
@@ -422,14 +422,24 @@
         }
 
         
+        #recusar{
+            background-color: rgb(221, 221, 221);
+            border-color: rgb(204, 204, 204);
+            color: black;
+            border-radius: 5px;
+            width: 101%;
+            margin-left: 25px;
+            margin-top: 30px;
+        }
+
     #confirmar{
         background-color: #f01313;
         border-color: #f01313;
         color: white;
         border-radius: 5px;
         width: 101%;
-        margin-left: 5%;
-        margin-top: 8%;
+        margin-left: 25px;
+        margin-top: 30px;
     }
     
 

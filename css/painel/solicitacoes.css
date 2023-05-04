@@ -511,6 +511,16 @@ th { text-transform: uppercase; }
     
     /**/
 
+    #recusar{
+        background-color: rgb(221, 221, 221);
+        border-color: rgb(204, 204, 204);
+        color: black;
+        border-radius: 5px;
+        width: 100%;
+        padding: 5px;
+        margin-top: 30px;
+    }
+
     #confirmar{
         background-color: #f01313;
         border-color: #f01313;
