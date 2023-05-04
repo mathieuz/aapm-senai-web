@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login/login.css" type="text/css">
+    <link rel="shortcut icon" href="img/ico/senai.ico" type="image/x-icon">
+    <title>Fazer Login - AAPM</title>
+</head>
+<body>
+    <main>
+        <section id="secLogo"> 
+            <img src="img/aapmlogo.png" id="imgLogoAapm">
+        </section>
+
+        <section id="secFormLogin">
+            <div id="formLogin">
+                <img src="img/senai-logo.png" id="senaiLogo">
+                <h1>Portal AAPM SENAI</h1>
+
+                <div>
+                    <input type="text" id="inputEmail" title="Insira um e-mail" required>
+                    <label>E-mail Institucional</label>
+                </div>
+
+                <div>
+                    <input type="password" id="inputSenha" title="Insira a senha" required>
+                    <label>Senha</label>
+
+                    <img src="img/icones/mostrarSenhaOff.png" id="mostrarSenha" title="Mostrar Senha">
+                </div>
+
+                <button id="btnFazerLogin">Iniciar Sessão</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <img src="img/senai-logo-branco.png" id="footerImgLogo">
+            <span id="spanFooterCopyrightSenai">SENAI Manuel Garcia Filho &#x1427; Copyright XXXX &copy; Todos os direitos reservados.</span>
+        </div>
+    </footer>
+    <script src="js/login/login-scripts.js" type="text/javascript"></script>
+    <script type="module" src="@firebase/login/login.js"></script>
+</body>
+</html>

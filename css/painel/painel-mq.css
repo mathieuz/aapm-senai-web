@@ -1,0 +1,13 @@
+@media (max-height: 800px){
+    header{
+        background-color: white;
+    }
+
+        header div{
+            margin: 5px!important;
+        }
+
+    #senaiLogo{
+        width: 85px!important;
+    }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/painel/global.css">
+    <link rel="stylesheet" href="../../css/painel/global-mq.css">
+    <link rel="stylesheet" href="../../css/painel/todos-os-alunos.css">
+    <link rel="stylesheet" href="../../css/painel/todos-os-alunos mq.css">
+    <title>Alunos</title>
+</head>
+<body>
+    <div class="divHeading">
+        <h1 class="tituloSecaoPagina">Alunos</h1>
+    </div>
+
+    <div id="divQuantAlunos">
+        <img src="../../img/icones/icon-alunos.png" id="imgQuantAlunos">
+        <label id="infoQtdAlunos">. . .</label>
+    </div>
+
+    <div id="divBarraDePesquisa">
+        <img src="../../img/icones/busca.png" id="icoBusca" class="barra">
+        <input type="text" id="barraDePesquisa" placeholder="Busque por um aluno aqui." class="barra">
+        <select class="barra" id="filtro">
+            <option>Buscar Por: Matrícula</option>
+            <option selected>Buscar Por: Nome</option>
+            <option>Buscar Por: Curso</option>
+            <option>Buscar Por: Turma</option>
+            <option>Buscar Por: CPF</option>
+        </select>
+    </div>
+    
+
+    <!--
+    <section id="sectionRegistro">
+        <div class="registroItem">
+            <div>
+                <img src="../../../img/icones/icon-foto-perfil.png">
+            </div>
+            <div>
+                <span>Matheus André da Silva</span>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section id="sectionRegistro">
+
+        <!--
+        <div class="registroItem">
+            <img src="../../../img/icones/icon-foto-perfil.png" class="imgAluno">
+            
+            <table>
+                <thead>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Curso</th>
+                    <th>Turma</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09876543212</td>
+                        <td>Matheus André da Silva</td>
+                        <td>234.432.243-43</td>
+                        <td>Desenvolvimento de Sistemas</td>
+                        <td>M3DSI</td>
+                    </tr>
+                </tbody>
+            </table>
+             
+        </div>
+        -->
+
+    </section>
+
+    <section id="modalRegistro">
+        <img src="../../img/icones/icon-caneta.png" id="botaoEditar" title="Editar Informações">
+        <span id="botaoFechar" title="Fechar Janela">&times;</span>
+
+        <section class="coluna" id="colunaFoto">
+            <img src="../../img/icones/icon-foto-perfil.png" id="imgAluno">
+
+            <span id="nomeAluno" class="spanItemCadastral"></span>
+
+            <div class="itemCadastral" title="E-mail institucional">
+                <div>
+                    <img src="../../img/icones/icon-email.png" class="icone">
+                    <span id="emailAluno" class="spanItemCadastral"></span>
+                </div>
+            </div>
+
+            <div class="itemCadastral" title="Telefone">
+                <div>
+                    <img src="../../img/icones/icon-telefone.png" class="icone">
+                    <span id="telefoneAluno" class="spanItemCadastral"></span>
+                </div>
+            </div>
+
+            <div class="itemCadastral" title="Curso">
+                <div>
+                    <img src="../../img/icones/icon-curso.png" class="icone">
+                    <span id="cursoAluno" class="spanItemCadastral"></span>
+                </div>
+            </div>
+
+            <div class="itemCadastral" title="Data de Nascimento">
+                <div>
+                    <img src="../../img/icones/icon-dtnascimento.png" class="icone">
+                    <span id="dataNascimentoAluno" class="spanItemCadastral" ></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="coluna">
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputMatricula" value="">
+                <label>Matrícula</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputTurma" value="">
+                <label>Turma</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputCategoria" value="">
+                <label>Categoria</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly class="inputDados" id="inputPeriodo" value="">
+                <label>Período</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="date" id="inputInicioDoCurso" class="inputDados" value="">
+                <label>Início do Curso</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="date" id="inputFimDoCurso" class="inputDados" value="">
+                <label>Fim do Curso</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="text" id="numArmario" class="inputDados" value="">
+                <label>Número do Armário</label>
+            </div>
+
+            <div class="divInput">
+                <input readonly type="text" id="voucher" class="inputDados" value="">
+                <label>Voucher de Wi-Fi</label>
+            </div>
+
+            <input type="hidden" id="idAluno" value="">
+        </section>
+
+    </section>
+
+
+    <script type="module" src="../../@firebase/painel/todos-os-alunos.js"></script>
+    <script type="text/javascript" src="../../js/painel/todos-os-alunos.js"></script>
+</body>
+</html>
