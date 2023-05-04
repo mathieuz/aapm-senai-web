@@ -2,6 +2,32 @@ body, html{
     height: 100%;
 }
 
+#divQuantAlunos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: 18px;
+    margin-right: 18px;
+
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 2px 1px orangered;
+}
+
+    #divQuantAlunos img{
+        background-color: orangered;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #divQuantAlunos label{
+        margin-left: 10px;
+    }
+
 #divBarraDePesquisa{
     display: flex;
     flex-direction: row;

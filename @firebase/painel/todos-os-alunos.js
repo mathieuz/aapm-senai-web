@@ -1,8 +1,13 @@
 import { db, storage } from "../module.js"
 
-import { getDocs, collection, query, where, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getDocs, collection, query, where, doc, updateDoc, getCountFromServer } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
+
+//Conta quantidade de registros de alunos ao todo.
+const coll = collection(db, "Aluno");
+const snapshot = await getCountFromServer(coll);
+document.getElementById("infoQtdAlunos").innerHTML = `Há ${snapshot.data().count} alunos associados à AAPM atualmente.`
 
 const colecao = collection(db, "Aluno")
 const arrayDocumentos = await getDocs(colecao)
