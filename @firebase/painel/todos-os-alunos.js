@@ -26,10 +26,31 @@ arrayDocumentos.forEach(doc => {
     let table = document.createElement("table")
     let thead = document.createElement("thead")
     let tbody = document.createElement("tbody")
+
     let valueMatricula = document.createElement("input")
     valueMatricula.setAttribute("type", "hidden")
     valueMatricula.setAttribute("class", "valueMatricula")
     valueMatricula.value = doc.get("numMatricula")
+
+    let valueNome = document.createElement("input")
+    valueNome.setAttribute("type", "hidden")
+    valueNome.setAttribute("class", "valueNome")
+    valueNome.value = doc.get("nome")
+
+    let valueCurso = document.createElement("input")
+    valueCurso.setAttribute("type", "hidden")
+    valueCurso.setAttribute("class", "valueCurso")
+    valueCurso.value = doc.get("curso")
+
+    let valueTurma = document.createElement("input")
+    valueTurma.setAttribute("type", "hidden")
+    valueTurma.setAttribute("class", "valueTurma")
+    valueTurma.value = doc.get("turma")
+
+    let valueCpf = document.createElement("input")
+    valueCpf.setAttribute("type", "hidden")
+    valueCpf.setAttribute("class", "valueCpf")
+    valueCpf.value = doc.get("cpf")
 
     let th = document.createElement("th")
     th.innerHTML = "Matrícula"
@@ -75,7 +96,7 @@ arrayDocumentos.forEach(doc => {
 
 
     table.append(thead, tbody)
-    registroItem.append(imgAluno, table, valueMatricula)
+    registroItem.append(imgAluno, table, valueMatricula, valueNome, valueCurso, valueTurma, valueCpf)
     sectionRegistro.append(registroItem)
 
     try{
