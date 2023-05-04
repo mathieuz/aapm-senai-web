@@ -13,7 +13,7 @@ arrayDocumentos.forEach(async (d) => {
 
     if (docSolicitacao.exists()) {
         console.log("Subcoleção:", docSolicitacao.data())
-        console.log("Subcoleção: ", docSolicitacao.get("jaleco"))
+        console.log("Subcoleção: ", typeof docSolicitacao.get("jaleco"))
 
         let sectionRegistro = document.getElementById("sectionRegistro")
 
@@ -103,3 +103,73 @@ arrayDocumentos.forEach(async (d) => {
 
     }
 });
+
+/*Acessando a section contêiner de todos os registros.*/
+let sectionRegistro = document.getElementById("sectionRegistro")
+
+/*Acessando o Modal.*/
+let modalRegistro = document.getElementById("modalRegistro")
+
+/*Acessando o array de todos os registros.*/
+let arrayRegistro = document.getElementsByClassName("registroItem")
+
+setTimeout(() => {
+  for (let i = 0; i < arrayRegistro.length; i++){
+    arrayRegistro[i].addEventListener("click", async () => {
+
+      const matricula = document.getElementsByClassName("valueMatricula")[i].value
+      const busca = query(colecao, where("numMatricula", "==", matricula))
+      const resultadoBusca = await getDocs(busca)
+
+      resultadoBusca.forEach(async (d) => {
+        const solicitacao = doc(db, "Aluno", d.id, "solicitacoes", "solicitacao")
+        const docSolicitacao = await getDoc(solicitacao)
+
+        if (docSolicitacao.exists()){
+          document.getElementById("nomeAluno").innerHTML = d.get("nome")
+
+          document.getElementsByClassName("inputDados")[0].value = docSolicitacao.get("material") == true ? "Solicitado" : "Não Solicitado"
+
+          document.getElementsByClassName("inputDados")[1].value = docSolicitacao.get("blusao") == true ? "Solicitado" : "Não Solicitado"
+
+          document.getElementsByClassName("inputDados")[2].value = docSolicitacao.get("camiseta") == true ? "Solicitado" : "Não Solicitado"
+
+          document.getElementsByClassName("inputDados")[3].value = docSolicitacao.get("jaleco") == true ? "Solicitado" : "Não Solicitado"
+
+          document.getElementsByClassName("inputDados")[4].value = docSolicitacao.get("chave") == true ? "Solicitado" : "Não Solicitado"
+
+          document.getElementsByClassName("inputDados")[5].value = docSolicitacao.get("semestralidade") == true ? "Solicitado" : "Não Solicitado"
+
+          try{
+
+            //Adiciona imagem.
+            const storage = getStorage();
+            const starsRef = ref(storage, `images/${d.get("email")}`)
+            
+            getDownloadURL(starsRef)
+              .then((url) => {
+                imgAluno.src = `${url}`
+              })
+              .catch((error) => {
+                
+              });
+    
+        } catch {}
+        }
+
+      })
+
+      modalRegistro.style.display = "flex"
+      sectionRegistro.style.pointerEvents = "none"
+
+    })
+  }
+}, 470)
+
+/*Adicionando evento de fechar janela no elemento de fechar janela no botão.*/
+document.getElementById("botaoFechar").addEventListener("click", () => {
+  modalRegistro.style.display = "none"
+  imgAluno.src = "../../img/icones/icon-foto-perfil.png"
+
+  sectionRegistro.style.pointerEvents = "all"
+})

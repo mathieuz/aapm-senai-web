@@ -361,8 +361,11 @@ th { text-transform: uppercase; }
         }
 
     #modalRegistro #imgAluno{
-        width: 200px;
+        width: 240px;
+        height: 240px;
         margin-top: 80px;
+        border-radius: 100%;
+        object-fit: cover;
         align-self: center;
         margin-left:10%;
     }

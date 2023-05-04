@@ -14,11 +14,15 @@
         <h1 class="tituloSecaoPagina">Perfil</h1>
     </div>
 
-    <img src="../../img/foto-teste.jpg" id="imgPerfil">
+    <img src="../../img/icones/icon-foto-perfil.png" id="imgPerfil">
     <label for="alterarFoto" id="btnAlterarFoto">
         <img src="../../img/icones/icon-camera.png">
-        <input id="alterarFoto" type="file" accept="image/*">
+        <input id="alterarFoto" type="file" accept="image/jpeg, image/png, image/jpg">
     </label>
+    <div id="divAlterarInformacoes">
+        <img src="../../img/icones/icon-caneta.png" id="imagemCaneta">
+        <label>Editar Informações</label>
+    </div>
 
     <main>
         <section class="colunaConteudo">
@@ -32,9 +36,11 @@
                 <img src="../../img/icones/icon-telefone.png" class="icone">
                 <span class="info" id="telefoneAdmin">11987654321</span>
             </div>
+
+            <span class="btnPerfil" id="adicionarAdmin">+ Adicionar um Novo Administrador</span>
         </section>
     </main>
 
-    <script src="../../@firebase/painel/perfil.js" type="module"></script>
+    <script src="../../@firebase/painel/perfil.js" type="text/javascript"></script>
 </body>
 </html>
