@@ -357,8 +357,6 @@ th { text-transform: uppercase; }
         height: auto;
     }
 
-        #modalRegistro .coluna:nth-child(3){
-        }
 
     #modalRegistro #imgAluno{
         width: 240px;
@@ -374,7 +372,9 @@ th { text-transform: uppercase; }
         font-weight: 500;
         text-align: center!important;
         width: 310px;
-        margin-top: 10px;
+        margin-top: 350px;
+        margin-left: -350px;
+        position: absolute;
     }
     /**/
 

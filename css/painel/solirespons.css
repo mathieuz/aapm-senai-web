@@ -1,4 +1,4 @@
-@media(max-width: 200px){
+@media(max-width:500px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -28,29 +28,27 @@
     }
 
     #modalRegistro{
-        width: 96%;
-        height: 85%;
-        margin: 0 auto;
+        width: 385px;
+        height: 600px;
+        margin-top: -99px;
 
     }
     #modalRegistro #imgAluno{
-        margin: 0 auto;
-        width: 55%;
-        
-    }
-    #modalRegistro #nomeAluno{
-        font-size: 25px;
-        font-weight: 500;
-        font-size: 10px;
-        width: 130px;
-        justify-self: flex-start;
-        margin: auto;
-        margin-left: 15%;
+        width: 100px;
+        height:100px;
+        border-radius: 100%;
+        margin-left: 155px;
+   }
 
+
+    #modalRegistro #nomeAluno{
+        font-size:15px;
+        text-align: center;
+        width: 300px;
+        margin-left: 60px;
+        margin-top: 20px;
     }
    
-  
-
     #botaoFechar{
         display: block;
         cursor: pointer;
@@ -108,23 +106,44 @@
         .divInput{
             display: flex;
             flex-direction: column;
-            margin-left: 4%;
+            padding-left: 11px;
             margin-bottom: 1%;
+        }
+        .divTextArea{
+            display: flex;
+            flex-direction: column;
+            padding-left:11px;
         }
     
         .divInput input{
             cursor: auto;
             margin-top: 24%;
-            width: 180px;
-    
+            width: 165px;
+            
             border: 2px solid gray;
             border-radius: 3px;
             outline: transparent;
     
             transition: all ease-in-out 0.2s;
         }
+        
+        .divTextArea TextArea{
+            cursor: auto;
+            margin-top:10%;
+            width: 365px;
+            resize: none;
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+
+            transition: all ease-in-out 0.2s;
+        }
     
             .divInput input:hover{
+                border-color: rgb(155 194 249);
+            }
+
+            .divTextArea Textarea:hover{
                 border-color: rgb(155 194 249);
             }
     
@@ -141,7 +160,26 @@
     
             transition: all ease-in-out 0.2s;
         }
+        
+        main TextArea[type=text]{
+            padding-top: 10px;
+            padding-bottom: 6px;
+            padding-left: 8px;
+
+            width: auto;
+
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+
+        }
     
+        
+        textarea{
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
         .divInput label{
             pointer-events: none;
             margin-left: 2%;
@@ -149,14 +187,35 @@
             background-color: white;    
             transition: all 0.2s ease-in-out;
         }
-    
+        #labelArea{
+            width: 110px;
+        }
+        
+        .divTextArea label{
+            pointer-events: none;
+            margin-left: 2.5%;
+            margin-top: 6%;
+            background-color: white;
+            width: 30%;
+            transition: all 0.2s ease-in-out;
+            
+        }
+
         .divInput input:hover + label{
+            color: rgb(155 194 249);
+        }
+
+        .divTextArea TextArea:hover + label{
             color: rgb(155 194 249);
         }
     
         .inputDados{
             margin-top: 10px;
         }
+        .TextAreaDados{
+            margin-top: 10px;
+        }
+
 
         .descer{
             display: flex;
@@ -171,22 +230,32 @@
             flex-direction: row;
         }
 
-        
+        #recusar{
+            background-color: rgb(221, 221, 221);
+            border-color: rgb(204, 204, 204);
+            color: black;
+            border-radius: 5px;
+            width: 45%;
+            margin-left: 12px;
+            margin-top: 30px;
+        }
+
     #confirmar{
         background-color: #f01313;
         border-color: #f01313;
         color: white;
         border-radius: 5px;
-        width: 106%;
-        margin-left: -30%;
+        width: 45%;
+        margin: 0 10px auto;
     }
     
+      
 
 }
 
 
     /*===========================================================================================================*/
-    @media(max-width:700px){
+    @media(min-width:501px) and (max-width:700px){
 
     .registroItem{
         display: flex;
