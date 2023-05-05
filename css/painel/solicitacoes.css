@@ -424,7 +424,7 @@ th { text-transform: uppercase; }
         border: 2px solid gray;
         border-radius: 3px;
         outline: transparent;
-
+        resize: none;
         transition: all ease-in-out 0.2s;
 
     }
