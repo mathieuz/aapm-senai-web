@@ -1,5 +1,5 @@
 
-@media(max-width:500px){
+@media(max-width:820px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -118,7 +118,7 @@
     
         .divInput input{
             cursor: auto;
-            margin-top: 24%;
+            margin-top: 35%;
             width: 165px;
             
             border: 2px solid gray;
@@ -184,7 +184,7 @@
         .divInput label{
             pointer-events: none;
             margin-left: 2%;
-            margin-top: 8%;
+            margin-top: 13%;
             background-color: white;    
             transition: all 0.2s ease-in-out;
         }
@@ -256,7 +256,7 @@
 
 
     /*===========================================================================================================*/
-    @media(min-width:450px) and (max-width:850px){
+    @media(min-width:500px) and (max-width:850px){
 
     .registroItem{
         display: flex;
