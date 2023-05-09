@@ -129,3 +129,111 @@ main{
         #adicionarAdmin:hover{
             background-color: rgb(255, 128, 128);
         }
+
+#modalCadAdmin{
+    z-index: 2;
+
+    align-self: center;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 10px;
+
+    top: 15%;
+    padding: 12px;
+
+    position: fixed;
+
+    background-color: white;
+    box-shadow: 1px 1px 5000px 5000px rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+
+    animation: modalcadadmin 0.2s ease-in-out;
+}
+
+    @keyframes modalcadamin{
+        from{
+            opacity: -200%;
+        }
+    }
+
+    #modalCadAdmin h2, p{
+        margin: 3px;
+    }
+
+    #modalCadAdmin p{
+        margin-bottom: 40px;
+    }
+
+    #modalCadAdmin h2{
+        font-weight: 600;
+    }
+
+    #modalCadAdmin .divInput{
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 20px;
+    }
+
+    .divInput label{
+        position: absolute;
+        margin-top: -12px;
+        margin-left: 10px;
+        padding: 2px;
+        padding-right: 4px;
+        padding-left: 4px;
+
+        font-size: 14px;
+        color: gray;
+        background-color: white;
+
+        pointer-events: none;
+
+        transition: all 0.2s;
+    }
+
+    #modalCadAdmin input[type=text], #modalCadAdmin input[type=password], #modalCadAdmin input[type=email]{
+        width: auto;
+
+        border: 1px solid gainsboro;
+        border-radius: 2px;
+        padding: 15px;
+
+        text-align: start;
+        font-size: 16px;
+
+        outline-color: transparent;
+
+        transition: all 0.3s;
+    }
+
+    #modalCadAdmin input:hover, #modalCadAdmin input:focus{
+        outline-color: red;
+    }
+
+    #modalCadAdmin input:focus + label{
+        color: red!important;
+    }
+
+    #btnCadastrar{
+        cursor: pointer;
+
+        background-color: red;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 10px;
+
+        margin-top: 20px;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        #btnCadastrar:hover{
+            background-color: rgb(255, 96, 96);
+        }

@@ -195,9 +195,8 @@ setTimeout(() => {
 
     })
 
-    //Adicionando evento para os botões
   }
-}, 470)
+}, 480)
 
 /*Adicionando evento de fechar janela no elemento de fechar janela no botão.*/
 document.getElementById("botaoFechar").addEventListener("click", () => {
@@ -206,3 +205,8 @@ document.getElementById("botaoFechar").addEventListener("click", () => {
 
   sectionRegistro.style.pointerEvents = "all"
 })
+
+//Número de registros
+setTimeout(() => {
+  document.getElementById("infoQtdSol").innerHTML = `Há ${arrayRegistro.length} solicitações pendentes à serem analisadas.`
+}, 680)
