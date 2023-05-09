@@ -24,6 +24,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 
 /* Constantes necessárias para utilização dos métodos do Firebase que serão exportadas em outros arquivos. */
-export const auth = getAuth(app)
+export const ath = getAuth(app)
 export const db = getFirestore(app)
 export const storage = getStorage(app)

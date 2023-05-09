@@ -37,5 +37,3 @@ barraDePesquisa.addEventListener("input", function busca(){
         }
     }
 })
-
-filtro.addEventListener("submit", busca)

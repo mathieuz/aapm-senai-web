@@ -1,5 +1,5 @@
 /* Importando variáveis necessárias do arquivo module. */
-import { auth } from "../module.js"
+import { ath } from "../module.js"
 
 /* Importação dos módulos de conexão do Firebase. */
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
