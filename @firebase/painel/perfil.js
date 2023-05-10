@@ -32,6 +32,7 @@ document.getElementById("adicionarAdmin").addEventListener("click", () => {
     //Botão de cadastro
     document.getElementById("btnCadastrar").addEventListener("click", () => {
       alert("Usuário cadastrado!")
+      window.location.href = window.location.href
     })
 
     //Botão de fechar o modal
