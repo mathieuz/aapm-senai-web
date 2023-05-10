@@ -1,3 +1,4 @@
+
 input[type=file]{
     display: none;
 }
@@ -136,12 +137,12 @@ main{
     align-self: center;
     justify-self: center;
 
-    display: flex;
+    display: none;
     flex-direction: column;
 
     margin: 40px;
 
-    top: 15%;
+    top: 10%;
     padding: 12px;
 
     position: fixed;
@@ -150,7 +151,7 @@ main{
     box-shadow: 1px 1px 5000px 5000px rgba(0, 0, 0, 0.486);
     border-radius: 10px;
 
-    animation: modalcadadmin 0.2s ease-in-out;
+    animation: modalcadadmin ease-in-out 0.3s;
 }
 
     @keyframes modalcadamin{
@@ -261,3 +262,8 @@ main{
             
             transition: all 0.2s ease-in-out;
         }
+
+        #botaoFechar:hover{
+            background-color: #fd0026;
+            color: white;
+        }   

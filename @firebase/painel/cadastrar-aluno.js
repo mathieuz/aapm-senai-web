@@ -1,4 +1,4 @@
-import { db, auth } from "../module.js"
+import { db, ath } from "../module.js"
 
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
 
@@ -360,7 +360,7 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
     }
 
     if (verifValidacao == true){
-        createUserWithEmailAndPassword(auth, inputEmailInstitucional, inputSenha)
+        createUserWithEmailAndPassword(ath, inputEmailInstitucional, inputSenha)
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("Cadastro realizado com sucesso!")

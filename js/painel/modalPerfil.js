@@ -10,6 +10,10 @@ document.getElementById("imgIconAdmin").addEventListener("click", () => {
             modalPerfil.style.display = "none"
         }
 
+        document.getElementById("btnLogout").onclick = () => {
+            window.location.href = "./login.html"
+        }
+
     } else if (window.getComputedStyle(modalPerfil).display === "flex"){
         modalPerfil.style.display = "none"
     }
