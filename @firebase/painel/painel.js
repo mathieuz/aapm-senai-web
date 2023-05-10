@@ -17,7 +17,7 @@ onAuthStateChanged(auth, (user) => {
               const auth = getAuth();
               signOut(auth).then(() => {
                 alert("Saindo...")
-                document.location.href = "../../login.html"
+                document.location.href = "./login.html"
               }).catch((error) => {
                 alert("Um erro ocorreu ao deslogar.")
               });

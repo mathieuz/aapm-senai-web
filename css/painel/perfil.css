@@ -139,7 +139,7 @@ main{
     display: flex;
     flex-direction: column;
 
-    margin: 10px;
+    margin: 40px;
 
     top: 15%;
     padding: 12px;
@@ -236,4 +236,28 @@ main{
 
         #btnCadastrar:hover{
             background-color: rgb(255, 96, 96);
+        }
+
+        #botaoFechar{
+            display: block;
+    
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+    
+            position: absolute;
+            align-self: flex-end;
+            top: -15px;
+            right: -15px;
+            font-weight: 700;
+            font-size: 25px;
+    
+            margin: 0;
+            padding: 0px 10px;
+            border-radius: 100%;
+    
+            background-color: white;
+            
+            transition: all 0.2s ease-in-out;
         }
