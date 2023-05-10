@@ -6,6 +6,7 @@ import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/fi
 
 let modalPerfil = document.getElementById("modalPerfil")
 
+/*
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -40,3 +41,4 @@ onAuthStateChanged(auth, (user) => {
 
   }
 });
+*/
