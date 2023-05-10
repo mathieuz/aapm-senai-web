@@ -13,7 +13,7 @@ document.getElementById("btnFazerLogin").addEventListener("click", () => {
     signInWithEmailAndPassword(autenticacao, email, senha)
         .then((userCredential) => {
             alert("[SUCESSO] E-mail autenticado com sucesso.")
-            window.location.href = "./painel.html"
+            window.location.href = "../painel.html"
 
         })
         .catch((error) => {
