@@ -213,11 +213,41 @@ main input[type=date]{
     border-radius: 5px;
 } */
 
+body{
+    overflow-y: none;
+}
 
+#divQuantSol{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: 18px;
+    margin-right: 18px;
+
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 2px 1px rgb(123, 0, 255);
+}
+
+    #divQuantSol img{
+        background-color: rgb(123, 0, 255);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #divQuantSol label{
+        margin-left: 10px;
+    }
 
 #sectionRegistro{
     margin: 20px;
     padding: 0;
+    overflow-y: scroll;
+    height: 400px;
 }
 
 .registroItem{
@@ -285,7 +315,7 @@ th { text-transform: uppercase; }
     width: 820px;
 
     position: absolute;
-    top: 20%;
+    top: 2%;
     background-color: white;
     box-shadow: 1px 1px 5000px 5000px rgba(0, 0, 0, 0.486);
     border-radius: 10px;

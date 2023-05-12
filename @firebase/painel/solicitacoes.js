@@ -11,7 +11,7 @@ arrayDocumentos.forEach(async (d) => {
     const solicitacao = doc(db, "Aluno", d.id, "solicitacoes", "solicitacao")
     const docSolicitacao = await getDoc(solicitacao)
 
-    if (docSolicitacao.exists()) {
+    if (docSolicitacao.exists() && docSolicitacao.get("obs").length === 0) {
         console.log("Subcoleção:", docSolicitacao.data())
         console.log("Subcoleção: ", typeof docSolicitacao.get("jaleco"))
 
@@ -157,14 +157,46 @@ setTimeout(() => {
         } catch {}
         }
 
+        //Adicionando evento para os botões de recusar/confirmar.
+        document.getElementById("recusar").addEventListener("click", async () => {
+          let msg = document.getElementById("obs").value
+
+          if (String(msg).length > 0){
+            const alunoRef = doc(db, "Aluno", `${d.id}`, "solicitacoes", "solicitacao")
+            await updateDoc(alunoRef, {
+                obs: "Solicitação Recusada: " + msg
+            });
+
+            alert("Solicitação Recusada.")
+          } else {
+            alert("Detalhe nas observações antes de recusar uma solicitação.")
+          }
+        })
+
+        document.getElementById("confirmar").addEventListener("click", async () => {
+          let msg = document.getElementById("obs").value
+
+          if (String(msg).length === 0){
+            msg = "Sua solicitação foi confirmada!"
+          }
+
+          const alunoRef = doc(db, "Aluno", `${d.id}`, "solicitacoes", "solicitacao")
+          await updateDoc(alunoRef, {
+              obs: "Solicitação Confirmada: " + msg
+          });
+
+          alert("Mensagem Enviada.")
+        })
+
       })
 
       modalRegistro.style.display = "flex"
       sectionRegistro.style.pointerEvents = "none"
 
     })
+
   }
-}, 470)
+}, 480)
 
 /*Adicionando evento de fechar janela no elemento de fechar janela no botão.*/
 document.getElementById("botaoFechar").addEventListener("click", () => {
@@ -173,3 +205,9 @@ document.getElementById("botaoFechar").addEventListener("click", () => {
 
   sectionRegistro.style.pointerEvents = "all"
 })
+
+//Número de registros
+setTimeout(() => {
+  document.getElementById("infoQtdSol").innerHTML = `Há ${arrayRegistro.length} solicitações pendentes à serem analisadas.`
+}, 680)
+
