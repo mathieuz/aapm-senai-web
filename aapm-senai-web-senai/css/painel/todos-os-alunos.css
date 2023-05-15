@@ -135,10 +135,11 @@ th { text-transform: uppercase; }
     flex-direction: row;
 
     width: 820px;
-    margin: 0;
+
     padding: 0;
 
-    bottom: 150px;
+    margin-top: 10px;
+    margin-bottom:150px;
 
     position: fixed;
 
