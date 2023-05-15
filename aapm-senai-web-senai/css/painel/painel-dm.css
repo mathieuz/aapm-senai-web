@@ -1,0 +1,271 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+::selection{
+    background-color: #fd0026;
+}
+
+* {
+    font-family: "Poppins", "Helvetica";
+}
+
+html{
+    height: 100%;
+}
+
+a{
+    color: white;
+}
+
+img{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+
+    height: 100%;
+    margin: 0;
+}
+
+/**/
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../../img/senai-triangle-bg.png");
+    background-size: cover;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-color: rgba(255, 0, 0, 0.61);
+    filter: grayscale();
+
+    box-shadow: 10px 0px 1000px 5000px rgba(0, 0, 0, 0);
+
+    z-index: 3;
+
+    transition: all ease-in-out 0.5s;
+
+    width: auto;
+
+    color: white;
+    text-align: start;
+}
+
+
+    nav a{
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+
+        width: 100%;
+        padding: 5px;
+
+        transition: all 0.3s;
+    }
+
+        nav div:focus{
+            background-color: #fd0026;
+        }
+
+        nav a:hover{
+            background-color: rgba(255, 0, 0, 0.556);
+        }
+
+        nav .iconeLink{
+            cursor: pointer;
+
+            width: 20px;
+            height: 20px;
+
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        nav .spanLinkNav{
+            display: block;
+
+            font-weight: 600;
+            text-transform: uppercase;
+
+            font-size: 0%;
+
+            transition: all 0.4s;
+        }
+
+    nav:hover{
+        box-shadow: 10px 0px 1000px 5000px rgba(0, 0, 0, 0.541);
+    }
+
+    nav:hover > a div .spanLinkNav, nav:hover > div .spanLinkNav{
+        color: white;
+        font-size: 95%;
+
+        transition: all 0.4s;
+    }
+
+    nav:hover > a div, nav:hover > div{
+        padding-left: 10px;
+        padding-right: 50px;
+    }
+
+main{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    
+    margin: 0;
+}
+
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        z-index: 2;
+
+        background-color: rgb(55, 55, 55)!important;
+        color: white!important;
+
+        width: auto;
+
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.295);
+
+        transition: all ease-in-out 0.3s;
+    }
+
+        header div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            margin: 10px;
+        }
+
+            header #senaiLogo{
+                z-index: 4;
+                width: 100px;
+            }
+
+            header #aapm{
+                user-select: none;
+                -webkit-user-select: none;
+                -webkit-user-drag: none;
+
+                font-size: 25px;
+                font-weight: 200px;
+                margin-left: 6px;
+
+                animation: aapm ease-in-out 1s;
+            }
+
+            @keyframes aapm{
+                from{
+                    margin-left: -90px;
+                }
+            }
+
+        header #imgIconAdmin{
+            cursor: pointer;
+
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+
+            margin-left: 15px;
+        }
+
+        header #modalPerfil{
+            display: none;
+
+            flex-direction: column;
+            position: fixed;
+            right: 5px;
+            top: 45px;
+
+            padding: 15px;
+
+            background: rgb(105, 105, 105);
+            border-radius: 6px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.308);
+        }
+
+        header #nomeAdmin{
+            font-weight: 600;
+        }
+
+            #imgAdmin{
+                width: 90px;
+                height: 90px;
+            }
+
+            #btnVerPerfil{
+                cursor: pointer;
+
+                margin-top: 20px;
+                border: 2px solid red;
+                padding: 8px;
+                padding-left: 40px;
+                padding-right: 40px;
+                border-radius: 6px;
+
+                color: red;
+                font-weight: 700;
+
+                transition: all ease-in-out 0.2s;
+            }
+
+            #btnVerPerfil:hover{
+                background-color: red;
+                color: white;
+            }
+
+            #btnLogout{
+                cursor: pointer;
+
+                margin-top: 15px;
+                border: 1px solid transparent;
+                padding: 8px;
+                padding-left: 12px;
+                padding-right: 12px;
+                border-radius: 6px;
+
+                color: white;
+                font-weight: 700;
+
+                transition: all ease-in-out 0.2s;
+            }
+
+            #btnLogout:hover{
+                border-color: white;
+            }
+
+#btnDarkLightMode{
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+
+    transition: all ease-in-out 0.2s;
+
+    filter: invert();
+}
+
+    #btnDarkLightMode:hover{
+        background-color: rgb(113, 113, 113);
+    }

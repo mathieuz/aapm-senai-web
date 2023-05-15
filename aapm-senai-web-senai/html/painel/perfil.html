@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/painel/global.css">
+    <link rel="stylesheet" href="../../css/painel/perfil.css">
+    <link rel="stylesheet" href="../../css/painel/perfil-mq.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <div class="divHeading">
+        <h1 class="tituloSecaoPagina">Perfil</h1>
+    </div>
+
+    <img src="../../img/icones/icon-foto-perfil.png" id="imgPerfil">
+    <label for="alterarFoto" id="btnAlterarFoto">
+        <img src="../../img/icones/icon-camera.png">
+        <input id="alterarFoto" type="file" accept="image/jpeg, image/png, image/jpg">
+    </label>
+    <div id="divAlterarInformacoes">
+        <img src="../../img/icones/icon-caneta.png" id="imagemCaneta">
+        <label>Editar Informações</label>
+    </div>
+
+    <main>
+        <section class="colunaConteudo">
+            <span id="nomeAdmin"></span>
+            
+            <div class="divItem">
+                <img src="../../img/icones/icon-email.png" class="icone">
+                <span class="info" id="emailAdmin"></span>
+            </div>
+            <div class="divItem">
+                <img src="../../img/icones/icon-telefone.png" class="icone">
+                <span class="info" id="telefoneAdmin"></span>
+            </div>
+
+            <span class="btnPerfil" id="adicionarAdmin">+ Adicionar um Novo Administrador</span>
+        </section>
+    </main>
+
+    <section id="modalCadAdmin">
+        <span id="botaoFechar" title="Fechar Janela">&times;</span>
+        <h2>Cadastrar um novo administrador</h2>
+        <p>Inclua novos administradores para gerenciar as dependências da AAPM de forma online.</p>
+
+        <div class="divInput">
+            <input type="text" id="nomeAdmin" class="inputDados" value="">
+            <label>Nome Completo</label>
+        </div>
+
+        <div class="divInput">
+            <input type="text" id="telAdmin" class="inputDados" value="">
+            <label>Telefone</label>
+        </div>
+
+        <div class="divInput">
+            <input type="text" id="emailAdmin" class="inputDados" value="">
+            <label>E-mail</label>
+        </div>
+
+        <div class="divInput">
+            <input type="password" id="senhaAdmin" class="inputDados" value="">
+            <label>Senha</label>
+        </div>
+
+        <div class="divInput">
+            <input type="password" id="confirmSenhaAdmin" class="inputDados" value="">
+            <label>Confirme a Senha</label>
+        </div>
+
+        <span id="btnCadastrar">Cadastrar Administrador</span>
+    </section>
+
+    <script src="../../@firebase/painel/perfil.js" type="module"></script>
+</body>
+</html>
