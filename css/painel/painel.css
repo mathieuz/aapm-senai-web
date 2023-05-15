@@ -144,6 +144,8 @@ main{
         width: auto;
 
         box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.295);
+
+        transition: all ease-in-out 0.3s;
     }
 
         header div{
@@ -183,6 +185,8 @@ main{
             width: 35px;
             height: 35px;
             object-fit: cover;
+
+            margin-left: 15px;
         }
 
         header #modalPerfil{
@@ -201,7 +205,7 @@ main{
         }
 
         header #nomeAdmin{
-            font-weight: 300;
+            font-weight: 600;
         }
 
             #imgAdmin{
@@ -253,3 +257,15 @@ main{
             #btnLogout:hover{
                 border-color: rgb(141, 141, 141);
             }
+
+#btnDarkLightMode{
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+
+    transition: all ease-in-out 0.2s;
+}
+
+    #btnDarkLightMode:hover{
+        background-color: gainsboro;
+    }

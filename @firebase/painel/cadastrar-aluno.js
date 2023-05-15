@@ -360,32 +360,26 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
     }
 
     if (verifValidacao == true){
-        createUserWithEmailAndPassword(ath, inputEmailInstitucional, inputSenha)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                alert("Cadastro realizado com sucesso!")
-                //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
-                addDoc(collection(db, "Aluno"), {
-                    numMatricula: `${inputNumeroDaMatricula}`,
-                    nome: `${inputNome}`,
-                    dataDeNascimento: `${dataNascimento}`,
-                    cpf: `${inputCpf}`,
-                    telefone: `${inputTelefone}`,
-                    categoria: `${inputCategoria}`,
-                    turma: `${inputTurma}`,
-                    curso: `${inputCurso}`,
-                    periodo: `${inputPeriodo}`,
-                    dataDeInicioCurso: `${inputDataDeInicio}`,
-                    dataDeConclusaoCurso: `${inputDataDeConclusao}`,
-                    numArmario: `${inputNumArmario}`,
-                    voucher: `${inputVoucher}`,
-                    email: `${inputEmailInstitucional}`,
-                    config: {
-                        notificacoes: true
-                    }
-                });
+        alert("Cadastro realizado com sucesso!")
+        
+        //Estrutura de criação de coleção de dados + armazenamento no firestore (uma veque a autenticação e cadastro foram bem-sucedidos)
+        addDoc(collection(db, "Aluno"), {
+            numMatricula: `${inputNumeroDaMatricula}`,
+            nome: `${inputNome}`,
+            dataDeNascimento: `${dataNascimento}`,
+            cpf: `${inputCpf}`,
+            telefone: `${inputTelefone}`,
+            categoria: `${inputCategoria}`,
+            turma: `${inputTurma}`,
+            curso: `${inputCurso}`,
+            periodo: `${inputPeriodo}`,
+            dataDeInicioCurso: `${inputDataDeInicio}`,
+            dataDeConclusaoCurso: `${inputDataDeConclusao}`,
+            numArmario: `${inputNumArmario}`,
+            voucher: `${inputVoucher}`,
+            email: `${inputEmailInstitucional}`,
+        });
 
-            })
     } else {
         alert("Alguns campos não estão preenchidos corretamente. Verifique-os e tente novamente.")
     }
