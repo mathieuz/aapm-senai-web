@@ -21,15 +21,15 @@ onAuthStateChanged(auth, async (user) => {
 
     if (admin.get("darkMode") == true){
       hrefCss.href = "css/painel/painel-dm.css"
-      logoSenai.src = "../../img/senai-logo-branco.png"
-      imgIconAdmin.src = "../../img/icones/icon-foto-perfil-dm.png"
-      imgAdmin.src = "../../img/icones/icon-foto-perfil-dm.png"
+      logoSenai.src = "../img/senai-logo-branco.png"
+      imgIconAdmin.src = "../img/icones/icon-foto-perfil-dm.png"
+      imgAdmin.src = "../img/icones/icon-foto-perfil-dm.png"
 
     } else if (admin.get("darkMode") == false){
       hrefCss.href = "css/painel/painel.css"
-      logoSenai.src = "../../img/senai-logo.png"
-      imgIconAdmin.src = "../../img/icones/icon-foto-perfil.png"
-      imgAdmin.src = "../../img/icones/icon-foto-perfil.png"
+      logoSenai.src = "../img/senai-logo.png"
+      imgIconAdmin.src = "../img/icones/icon-foto-perfil.png"
+      imgAdmin.src = "../img/icones/icon-foto-perfil.png"
     }
 
     //Adiciona função dark/light mode.
