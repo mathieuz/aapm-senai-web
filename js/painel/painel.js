@@ -28,8 +28,12 @@ for (let i = 0; i < arrayLinkNav.length; i++){
                 iframe.src = "html/painel/solicitacoes.html"
             break
 
-            case "solicitações":
-                iframe.src = "html/painel/solicitacoes.html"
+            case "newsletter":
+                iframe.src = "..."
+            break
+
+            case "últimos logins":
+                iframe.src = "..."
             break
         }
     })
