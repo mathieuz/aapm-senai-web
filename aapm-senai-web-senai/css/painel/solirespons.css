@@ -1,5 +1,5 @@
 
-@media(max-width:350px){
+@media(max-width:500px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -30,10 +30,8 @@
 
     #modalRegistro{
         width: 385px;
-        height: 600px;
-        margin-top: -99px;
-
     }
+
     #modalRegistro #imgAluno{
         width: 100px;
         height:100px;
@@ -108,7 +106,7 @@
             display: flex;
             flex-direction: column;
             padding-left: 11px;
-            margin-bottom: 1%;
+            margin-top: 10px;
         }
         .divTextArea{
             display: flex;
@@ -256,7 +254,7 @@
 
 
     /*===========================================================================================================*/
-    @media(min-width:460px) and (max-width:850px){
+    @media(min-width: 501px) and (max-width:850px){
 
     .registroItem{
         display: flex;
@@ -287,8 +285,8 @@
     }
 
     #modalRegistro{
-        width: 445px;
-        margin-top: -70px;
+        width: 410px;
+        
     }
     #modalRegistro #imgAluno{
         margin-left: 170px ;
@@ -380,7 +378,7 @@
         .divInput input{
             cursor: auto;
             margin-top: 25%;
-            width: 180px;
+            width: 165px;
     
             border: 2px solid gray;
             border-radius: 3px;
@@ -392,7 +390,7 @@
         .divTextArea TextArea{
             cursor: auto;
             margin-top:10%;
-            width: 413px;
+            width: 380px;
 
             border: 2px solid gray;
             border-radius: 3px;
