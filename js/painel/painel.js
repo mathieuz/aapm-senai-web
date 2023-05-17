@@ -29,7 +29,7 @@ for (let i = 0; i < arrayLinkNav.length; i++){
             break
 
             case "newsletter":
-                iframe.src = "..."
+                iframe.src = "html/painel/newsletter.html"
             break
 
             case "últimos logins":
