@@ -21,21 +21,22 @@
             <label>Título da Publicação</label>
         </div>
         <div>
-            <textarea id="tituloNewsletter" placeholder="Conteúdo de texto. Descreva aqui em detalhes toda a publicação."></textarea>
+            <textarea id="descricaoNewsletter" placeholder="Conteúdo de texto. Descreva aqui em detalhes toda a publicação."></textarea>
             <label>Descrição</label>
         </div>
         <div>
-            <img src="#" id="fotoPubli">
+            <img src="" id="fotoPubli">
         </div>
         <div>
-            <button id="inserirImagem">+ Inserir uma imagem</button>
+            <label for="arquivo" id="inserirImagem">+ Inserir uma imagem
+                <input type="file" id="arquivo">
+            </label>
         </div>
         <div>
             <button id="enviarPublicacao">Enviar Publicação</button>
         </div>
     </section>
 
-    <script type="module" src="../../@firebase/painel/todos-os-alunos.js"></script>
-    <script type="text/javascript" src="../../js/painel/todos-os-alunos.js"></script>
+    <script src="../../@firebase/painel/newsletter.js" type="module"></script>
 </body>
 </html>
