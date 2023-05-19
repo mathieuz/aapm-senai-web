@@ -181,6 +181,7 @@ main{
             width: 35px;
             height: 35px;
             object-fit: cover;
+            border-radius: 100%;
 
             margin-left: 15px;
         }
@@ -207,6 +208,8 @@ main{
             #imgAdmin{
                 width: 90px;
                 height: 90px;
+                border-radius: 100%;
+                object-fit: cover;
             }
 
             #btnVerPerfil{
