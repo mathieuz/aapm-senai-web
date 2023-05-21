@@ -78,22 +78,21 @@ document.getElementById("adicionarAdmin").addEventListener("click", () => {
   if (window.getComputedStyle(modalPerfil).display == "none"){
     modalPerfil.style.display = "flex"
 
-    
-    let telAdmin = document.getElementById("telAdmin").value
-    let emailAdmin = document.getElementById("emailAdmin").value
-    let senhaAdmin = document.getElementById("senhaAdmin").value
-    let confirmSenha = document.getElementById("confirmSenhaAdmin").value
-
     //Botão de cadastro
     document.getElementById("btnCadastrar").addEventListener("click", async () => {
-      alert(document.body.getElementById("nomeAdmin").value)
+      let nomeAdmin = document.getElementById("inputNomeAdmin").value
+      let telAdmin = document.getElementById("inputTelAdmin").value
+      let emailAdmin = document.getElementById("inputEmailAdmin").value
+      let senhaAdmin = document.getElementById("inputSenhaAdmin").value
+      let confirmSenha = document.getElementById("inputConfirmSenhaAdmin").value
 
-      /*
       if (senhaAdmin === confirmSenha){
-        await setDoc(doc(db, "cities", "LA"), {
-          name: "Los Angeles",
-          state: "CA",
-          country: "USA"
+        await setDoc(doc(db, "Administrador", emailAdmin), {
+          nome: nomeAdmin,
+          email: emailAdmin,
+          telefone: telAdmin,
+          senhaAdmin: btoa(senhaAdmin),
+          darkMode: false
         });     
 
         alert("Administrador Cadastrado!")
@@ -103,7 +102,6 @@ document.getElementById("adicionarAdmin").addEventListener("click", () => {
       } else {
         alert("Senhas não conferem. Tente novamente.")
       }
-      */
 
     })
 
