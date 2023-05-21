@@ -8,6 +8,10 @@ import { addDoc, collection } from "https://www.gstatic.com/firebasejs/9.17.1/fi
 /********/
 /********/
 
+/*Pop-up: 0 > Alerta, 1 > Sucesso, 2 > Informação*/
+let popUp = document.getElementsByClassName("popUpAvisos")
+let spanPopUp = document.getElementsByClassName("spanPopUp")
+
 /*Selecionando todos os inputs, labels e icones do formulário.*/
 let arrayInput = document.getElementsByClassName("inputCad")
 let arrayLabels = document.getElementsByTagName("label")
@@ -360,7 +364,6 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
     }
 
     if (verifValidacao == true){
-        alert("Cadastro realizado com sucesso!")
         
         //Estrutura de criação de coleção de dados + armazenamento no firestore (uma veque a autenticação e cadastro foram bem-sucedidos)
         addDoc(collection(db, "Aluno"), {
@@ -380,8 +383,20 @@ document.getElementById("btnCadastrarAluno").addEventListener("click", () => {
             email: `${inputEmailInstitucional}`,
         });
 
+        spanPopUp[1].innerHTML = "Cadastro realizado com sucesso!"
+        popUp[1].style.display = "flex"
+        
+        setTimeout(() => {
+          window.location.href = "../../html/painel/todos-os-alunos.html"
+        }, 2000)
+
     } else {
-        alert("Alguns campos não estão preenchidos corretamente. Verifique-os e tente novamente.")
+        spanPopUp[0].innerHTML = "Algumas das informações inseridas estão incorretas ou estão vazias. Tente novamente."
+        popUp[0].style.display = "flex"
+        
+        setTimeout(() => {
+          popUp[0].style.display = "none"
+        }, 3000)
     }
 })
 

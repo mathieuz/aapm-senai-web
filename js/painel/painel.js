@@ -31,10 +31,6 @@ for (let i = 0; i < arrayLinkNav.length; i++){
             case "newsletter":
                 iframe.src = "html/painel/newsletter.html"
             break
-
-            case "últimos logins":
-                iframe.src = "..."
-            break
         }
     })
 }

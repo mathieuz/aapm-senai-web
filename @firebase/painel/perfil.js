@@ -12,6 +12,10 @@ import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/fi
 const imgPerfil = document.getElementById('imgPerfil');
 const inputAlterarFoto = document.getElementById('alterarFoto');
 
+/*Pop-up: 0 > Alerta, 1 > Sucesso.*/
+let popUp = document.getElementsByClassName("popUpAvisos")
+let spanPopUp = document.getElementsByClassName("spanPopUp")
+
 inputAlterarFoto.addEventListener('change', function() {
   const file = this.files[0];
 
@@ -86,21 +90,42 @@ document.getElementById("adicionarAdmin").addEventListener("click", () => {
       let senhaAdmin = document.getElementById("inputSenhaAdmin").value
       let confirmSenha = document.getElementById("inputConfirmSenhaAdmin").value
 
-      if (senhaAdmin === confirmSenha){
+      if (String(nomeAdmin).length > 0 && String(telAdmin).length > 0 && String(emailAdmin).length > 0){
+        if (String(senhaAdmin).length > 0 && String(senhaAdmin) == String(confirmSenha)){
         await setDoc(doc(db, "Administrador", emailAdmin), {
-          nome: nomeAdmin,
-          email: emailAdmin,
-          telefone: telAdmin,
-          senhaAdmin: btoa(senhaAdmin),
-          darkMode: false
-        });     
+            nome: nomeAdmin,
+            email: emailAdmin,
+            telefone: telAdmin,
+            senhaAdmin: btoa(senhaAdmin),
+            darkMode: false
+          });     
 
-        alert("Administrador Cadastrado!")
+          spanPopUp[1].innerHTML = "Administrador cadastrado com sucesso!"
+          popUp[1].style.display = "flex"
 
-        location.reload()
+          setTimeout(() => {
+            location.reload()
+          }, 2000)
+          
+
+        } else {
+
+          spanPopUp[0].innerHTML = "Senhas não conferem. Verifique os campos e tente novamente."
+          popUp[0].style.display = "flex"
+      
+          setTimeout(() => {
+            popUp[0].style.display = "none"
+          }, 5000)
+
+        }
 
       } else {
-        alert("Senhas não conferem. Tente novamente.")
+        spanPopUp[0].innerHTML = "Alguns campos não foram preenchidos. Verifique-os e tente novamente."
+        popUp[0].style.display = "flex"
+    
+        setTimeout(() => {
+          popUp[0].style.display = "none"
+        }, 5000)
       }
 
     })

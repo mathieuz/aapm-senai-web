@@ -12,6 +12,10 @@ document.getElementById("infoQtdAlunos").innerHTML = `Há ${snapshot.data().coun
 const colecao = collection(db, "Aluno")
 const arrayDocumentos = await getDocs(colecao)
 
+/*Pop-up: 0 > Alerta, 1 > Sucesso.*/
+let popUp = document.getElementsByClassName("popUpAvisos")
+let spanPopUp = document.getElementsByClassName("spanPopUp")
+
 arrayDocumentos.forEach(doc => {
     
     let sectionRegistro = document.getElementById("sectionRegistro")
@@ -215,6 +219,13 @@ document.getElementById("botaoFechar").addEventListener("click", () => {
 
 /*Função edição.*/
 function editarInfo(){
+  spanPopUp[2].innerHTML = "Modo de edição habilitado. Clique em salvar alterações ou feche a janela para descartar alterações."
+  popUp[2].style.display = "flex"
+  
+  setTimeout(() => {
+    popUp[2].style.display = "none"
+  }, 3000)
+
   let btn = document.getElementById("botaoEditar")
 
   let inputModal = document.getElementsByClassName("inputDados")
@@ -262,7 +273,10 @@ async function salvarInfo(){
 
     })
 
-    alert("Informações alteradas com sucesso!")
+    spanPopUp[1].innerHTML = "Informações salvas com sucesso!"
+    popUp[1].style.display = "flex"
 
-    window.location.href = window.location.href
+    setTimeout(() => {
+        window.location.href = window.location.href
+    }, 2000)
 }
