@@ -1,7 +1,7 @@
 /* Importando variáveis necessárias do arquivo module. */
 import { ath, db, storage } from "../module.js"
 
-import { doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { doc, getDoc, updateDoc, deleteField } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
 
@@ -23,11 +23,11 @@ onAuthStateChanged(auth, async (user) => {
 
     if (admin.get("darkMode") == true){
       hrefCss.href = "css/painel/painel-dm.css"
-      logoSenai.src = "../../img/senai-logo-branco.png"
+      logoSenai.src = "./img/senai-logo-branco.png"
 
     } else if (admin.get("darkMode") == false){
       hrefCss.href = "css/painel/painel.css"
-      logoSenai.src = "../../img/senai-logo.png"
+      logoSenai.src = "./img/senai-logo.png"
 
     }
 
@@ -37,7 +37,7 @@ onAuthStateChanged(auth, async (user) => {
 
       if (hrefCss.href.includes("css/painel/painel.css")){
         hrefCss.href = "css/painel/painel-dm.css"
-        logoSenai.src = "../../img/senai-logo-branco.png"
+        logoSenai.src = "./img/senai-logo-branco.png"
 
         const alterarDarkMode = doc(db, "Administrador", user.email)
         await updateDoc(alterarDarkMode, {
@@ -46,7 +46,7 @@ onAuthStateChanged(auth, async (user) => {
 
       } else if (hrefCss.href.includes("css/painel/painel-dm.css")){
         hrefCss.href = "css/painel/painel.css"
-        logoSenai.src = "../../img/senai-logo.png"
+        logoSenai.src = "./img/senai-logo.png"
 
         const alterarDarkMode = doc(db, "Administrador", user.email)
         await updateDoc(alterarDarkMode, {
@@ -66,7 +66,19 @@ onAuthStateChanged(auth, async (user) => {
             document.getElementById("nomeAdmin").innerHTML = admin.get("nome")
             document.getElementById("emailAdmin").innerHTML = admin.get("email")
 
-            document.getElementById("btnLogout").addEventListener("click", () => {
+            document.getElementById("btnLogout").addEventListener("click", async () => {
+              //Verifica se a conta é nova. Se sim, remove o campo de sedocumento.
+              if (admin.get("senhaAdmin") != undefined){
+                const removeSenha = doc(db, 'Administrador', user.email)
+                await updateDoc(removeSenha, {
+                  senhaAdmin: deleteField()
+                });
+              
+                alert("Admin novo, senha removida do banco.")
+              } else {
+                alert("Nada acontece feijoada.")
+              }
+              
               const auth = getAuth();
               signOut(auth).then(() => {
                 alert("Saindo...")
