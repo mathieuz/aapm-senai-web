@@ -111,3 +111,8 @@ document.getElementById("adicionarAdmin").addEventListener("click", () => {
     })
   }
 })
+
+//Redireciona apra a página do newsletter.
+document.getElementById("criarPostagem").addEventListener("click", () => {
+  window.location.href = "../../html/painel/newsletter.html"
+})

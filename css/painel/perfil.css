@@ -131,6 +131,24 @@ main{
             background-color: rgb(255, 128, 128);
         }
 
+    #criarPostagem{
+        cursor: pointer;
+        margin-top: 20px;
+        background-color: rgb(0, 216, 137);
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: all ease-in-out 0.2s;
+    }
+
+        #criarPostagem:hover{
+            background-color: rgb(0, 154, 97);
+        }
+
 #modalCadAdmin{
     z-index: 2;
 
@@ -267,3 +285,7 @@ main{
             background-color: #fd0026;
             color: white;
         }   
+
+        .btnPerfil:last-child{
+            margin-top: 10px!important;
+        }
