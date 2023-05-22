@@ -1,0 +1,61 @@
+<!--
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/painel/global.css">
+    <link rel="stylesheet" href="../../css/painel/global-mq.css">
+    <link rel="stylesheet" href="../../css/painel/newsletter.css">
+    <link rel="stylesheet" href="../../css/painel/todos-os-alunos mq.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <title>Newsletter</title>
+</head>
+<body>
+    <!--Pop-ups do sistema!-->
+    <div class="popUpAvisos" id="popAlerta">
+        <img src="../../img/icones/alerta-popup.png">
+        <span class="spanPopUp"></span>
+    </div>
+    <div class="popUpAvisos" id="popSucesso">
+        <img src="../../img/icones/sucesso-popup.png">
+        <span class="spanPopUp"></span>
+    </div>
+    <div class="popUpAvisos" id="popInfo">
+        <img src="../../img/icones/info-popup.png">
+        <span class="spanPopUp"></span>
+    </div>
+
+    <div class="divHeading">
+        <h1 class="tituloSecaoPagina">Newsletter</h1>
+    </div>
+
+    <section>
+        <div>
+            <input type="text" id="tituloNewsletter" placeholder="Insira um título para a publicação.">
+            <label>Título da Publicação</label>
+        </div>
+        <div>
+            <textarea id="descricaoNewsletter" placeholder="Conteúdo de texto. Descreva aqui em detalhes toda a publicação."></textarea>
+            <label>Descrição</label>
+        </div>
+        <div>
+            <img src="" id="fotoPubli">
+        </div>
+        <div>
+            <label for="arquivo" id="inserirImagem">+ Inserir uma imagem
+                <input type="file" id="arquivo">
+            </label>
+        </div>
+        <div>
+            <button id="enviarPublicacao">Enviar Publicação</button>
+        </div>
+    </section>
+
+    <script src="../../@firebase/painel/newsletter.js" type="module"></script>
+</body>
+</html>

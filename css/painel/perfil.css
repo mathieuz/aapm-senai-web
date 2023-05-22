@@ -1,0 +1,291 @@
+
+input[type=file]{
+    display: none;
+}
+
+#btnAlterarFoto{
+    position: absolute;
+    align-self: center;
+    top: 220px;
+    margin-left: 140px;
+    cursor: pointer;
+    z-index: 2;
+
+    transition: all ease-in-out 0.2s;
+}
+
+    #btnAlterarFoto:hover{
+        filter: brightness(1.5);
+    }
+
+#imgPerfil{
+    object-fit: cover;
+    align-self: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-color: white;
+    z-index: 1;
+
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.329);
+    padding: 10px;
+}
+
+main{
+    align-self: center;
+    padding: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+    border-radius: 10px;
+    margin-top: -40px;
+
+    width: 900px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+    .colunaConteudo{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .colunaConteudo .divItem{
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+        }
+
+        .colunaConteudo .divItem .icone{
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+
+            margin-bottom: 6px;
+        }
+
+            .divItem:last-child{
+                margin-bottom: auto;
+            }
+
+    #nomeAdmin{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+
+        margin-bottom: 20px;
+    }
+
+    #divAlterarInformacoes{
+        cursor: pointer;
+
+        position: absolute;
+        top: 215px;
+
+        margin-left: 660px;
+
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        padding: 10px;
+        background-color: white;
+        border-radius: 30px;
+        border: 1px solid gainsboro;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        #divAlterarInformacoes:hover{
+            background-color: rgb(207, 255, 207);
+        }
+
+        #imagemCaneta{
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        #divAlterarInformacoes label{
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+    #adicionarAdmin{
+        cursor: pointer;
+        margin-top: 20px;
+        background-color: red;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: all ease-in-out 0.2s;
+    }
+
+        #adicionarAdmin:hover{
+            background-color: rgb(255, 128, 128);
+        }
+
+    #criarPostagem{
+        cursor: pointer;
+        margin-top: 20px;
+        background-color: rgb(0, 216, 137);
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: all ease-in-out 0.2s;
+    }
+
+        #criarPostagem:hover{
+            background-color: rgb(0, 154, 97);
+        }
+
+#modalCadAdmin{
+    z-index: 2;
+
+    align-self: center;
+    justify-self: center;
+
+    display: none;
+    flex-direction: column;
+
+    margin: 40px;
+
+    top: 10%;
+    padding: 12px;
+
+    position: fixed;
+
+    background-color: white;
+    box-shadow: 1px 1px 5000px 5000px rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+
+    animation: modalcadadmin ease-in-out 0.3s;
+}
+
+    @keyframes modalcadamin{
+        from{
+            opacity: -200%;
+        }
+    }
+
+    #modalCadAdmin h2, p{
+        margin: 3px;
+    }
+
+    #modalCadAdmin p{
+        margin-bottom: 40px;
+    }
+
+    #modalCadAdmin h2{
+        font-weight: 600;
+    }
+
+    #modalCadAdmin .divInput{
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 20px;
+    }
+
+    .divInput label{
+        position: absolute;
+        margin-top: -12px;
+        margin-left: 10px;
+        padding: 2px;
+        padding-right: 4px;
+        padding-left: 4px;
+
+        font-size: 14px;
+        color: gray;
+        background-color: white;
+
+        pointer-events: none;
+
+        transition: all 0.2s;
+    }
+
+    #modalCadAdmin input[type=text], #modalCadAdmin input[type=password], #modalCadAdmin input[type=email]{
+        width: auto;
+
+        border: 1px solid gainsboro;
+        border-radius: 2px;
+        padding: 15px;
+
+        text-align: start;
+        font-size: 16px;
+
+        outline-color: transparent;
+
+        transition: all 0.3s;
+    }
+
+    #modalCadAdmin input:hover, #modalCadAdmin input:focus{
+        outline-color: red;
+    }
+
+    #modalCadAdmin input:focus + label{
+        color: red!important;
+    }
+
+    #btnCadastrar{
+        cursor: pointer;
+
+        background-color: red;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        border-radius: 10px;
+        font-weight: 600;
+        padding: 10px;
+
+        margin-top: 20px;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        #btnCadastrar:hover{
+            background-color: rgb(255, 96, 96);
+        }
+
+        #botaoFechar{
+            display: block;
+    
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+    
+            position: absolute;
+            align-self: flex-end;
+            top: -15px;
+            right: -15px;
+            font-weight: 700;
+            font-size: 25px;
+    
+            margin: 0;
+            padding: 0px 10px;
+            border-radius: 100%;
+    
+            background-color: white;
+            
+            transition: all 0.2s ease-in-out;
+        }
+
+        #botaoFechar:hover{
+            background-color: #fd0026;
+            color: white;
+        }   
+
+        .btnPerfil:last-child{
+            margin-top: 10px!important;
+        }

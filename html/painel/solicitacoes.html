@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/painel/global.css">
+    <link rel="stylesheet" href="../../css/painel/solicitacoes.css">
+    <link rel="stylesheet" href="../../css/painel/solirespons.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <title>Solicitações</title>
+</head>
+
+<body>
+    <!--Pop-ups do sistema!-->
+    <div class="popUpAvisos" id="popAlerta">
+        <img class="imgAlerta" src="../../img/icones/alerta-popup.png">
+        <span class="spanPopUp"></span>
+    </div>
+    <div class="popUpAvisos" id="popSucesso">
+        <img class="imgAlerta" src="../../img/icones/sucesso-popup.png">
+        <span class="spanPopUp"></span>
+    </div>
+    <div class="popUpAvisos" id="popInfo">
+        <img src="../../img/icones/info-popup.png">
+        <span class="spanPopUp"></span>
+    </div>
+
+    <div class="divHeading">
+        <h1 class="tituloSecaoPagina">Solicitações</h1>
+    </div>
+
+    <div id="divQuantSol">
+        <img src="../../img/icones/icon-solicitacoes.png">
+        <label id="infoQtdSol">. . .</label>
+    </div>
+
+
+    <!--
+    <section id="sectionRegistro">
+        <div class="registroItem">
+            <div>
+                <img src="../../../img/icones/icon-foto-perfil.png">
+            </div>
+            <div>
+                <span>Matheus André da Silva</span>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <section id="sectionRegistro">
+
+        <!--
+        <div class="registroItem">
+            <img src="../../../img/icones/icon-foto-perfil.png" class="imgAluno">
+
+            <table>
+                <thead>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th class="sumir">CPF</th>
+                    <th class="sumir">Curso</th>
+                    <th class="sumir">Turma</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09876543212</td>
+                        <td>Matheus André da Silva</td>
+                        <td class="sumir">234.432.243-43</td>
+                        <td class="sumir">Desenvolvimento de Sistemas</td>
+                        <td class="sumir">M3DSI</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        -->
+
+
+    </section>
+
+    <section id="modalRegistro">
+        <span id="botaoFechar" title="Fechar Janela">&times;</span>
+
+        <section class="coluna" id="colunaFoto">
+            <img src="../../img/icones/icon-foto-perfil.png" id="imgAluno">
+
+
+           
+        </section>
+
+    
+
+        <section class="coluna">
+
+            <div class="descer">
+                <span id="nomeAluno" class="spanItemCadastral"></span>
+                <div class="lado">
+                    <div class="divInput">
+
+                        <input readonly class="inputDados" id="inputMatricula" value="">
+                        <label>Material</label>
+                    </div>
+
+                    <div class="divInput">
+                        <input readonly class="inputDados" id="inputTurma" value="">
+                        <label>Moletom Senai</label>
+                    </div>
+                </div>
+
+                <div class="lado">
+                    <div class="divInput">
+                        <input readonly class="inputDados" id="inputCategoria" value="">
+                        <label>Camiseta Senai</label>
+                    </div>
+
+                    <div class="divInput">
+                        <input readonly class="inputDados" id="inputCategoria" value="">
+                        <label>Jaleco/Avental</label>
+                    </div>
+                </div>
+
+                <div class="lado">
+                    <div class="divInput">
+                        <input readonly class="inputDados" id="inputPeriodo" value="">
+                        <label>Cópia da Chave</label>
+                    </div>
+
+
+                    <div class="divInput">
+                        <input readonly type="text" id="inputInicioDoCurso" class="inputDados">
+                        <label>Semestralidade</label>
+                    </div>
+                </div>
+
+                <div class="divTextArea">
+                    <textarea class="TextAreaDados" id="obs" ></textarea>
+                    <label class="area" id="labelArea">Observações</label>
+                </div>
+                <div>
+            <button id="recusar">Recusar</button>
+            <button id="confirmar">Confirmar</button>
+                 </div>
+        </section>
+    </section>
+
+    <script src="../../@firebase/painel/solicitacoes.js" type="module"></script>
+</body>
+
+</html>
