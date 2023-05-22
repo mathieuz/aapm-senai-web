@@ -1,5 +1,5 @@
 
-@media(max-width:500px){
+@media(max-width:420px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -30,7 +30,7 @@
 
     #modalRegistro{
         width: 385px;
-        height: 600px;
+    
         margin-top: -99px;
 
     }
@@ -288,7 +288,6 @@
 
     #modalRegistro{
         width: 430px;
-        height: 810px;
         margin-top: -150px;
     }
     #modalRegistro #imgAluno{
@@ -366,14 +365,14 @@
         }
 
         .divInput{
-        padding-top:8%;
-        margin-left:1%;
+        padding-top:10%;
+        margin-left:4%;
         }
       
         .divTextArea{
             display: flex;
             flex-direction: column;
-            margin-left: 1% ;
+            margin-left: 4% ;
         }
     
         .divInput input{
@@ -498,7 +497,7 @@
             border-radius: 5px;
             width: 44%;
             margin: 0 auto;
-            margin-left: 21px;
+            margin-left: 28px;
             margin-top: 30px;
         }
 
@@ -507,7 +506,7 @@
         border-color: #f01313;
         color: white;
         border-radius: 5px;
-        width: 46%;
+        width: 44%;
         margin: auto;
         margin-left: 15px;
 
