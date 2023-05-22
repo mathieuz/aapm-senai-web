@@ -287,9 +287,9 @@
     }
 
     #modalRegistro{
-        width: 445px;
-        height: 650px;
-        margin-top: -70px;
+        width: 430px;
+        height: 810px;
+        margin-top: -150px;
     }
     #modalRegistro #imgAluno{
         margin-left: 170px ;
@@ -366,22 +366,20 @@
         }
 
         .divInput{
-            display: flex;
-            flex-direction: column;
-            margin-left: 3%;
-            margin-top: 3%;
+        padding-top:8%;
+        margin-left:1%;
         }
-
+      
         .divTextArea{
             display: flex;
             flex-direction: column;
-            margin-left:3% ;
+            margin-left: 1% ;
         }
     
         .divInput input{
             cursor: auto;
-            margin-top: 25%;
-            width: 180px;
+            margin-top: 2%;
+            width: 390px;
     
             border: 2px solid gray;
             border-radius: 3px;
@@ -392,8 +390,8 @@
 
         .divTextArea TextArea{
             cursor: auto;
-            margin-top:10%;
-            width: 413px;
+            margin-top:5%;
+            width: 405px;
 
             border: 2px solid gray;
             border-radius: 3px;
@@ -450,7 +448,7 @@
         .divInput label{
             pointer-events: none;
             margin-left: 2%;
-            margin-top: 8%;
+            margin-top: -1%;
             background-color: white;    
             transition: all 0.2s ease-in-out;
         }
@@ -458,7 +456,7 @@
         .divTextArea label{
             pointer-events: none;
             margin-left: 2.5%;
-            margin-top: 6%;
+            margin-top: 2%;
             background-color: white;
             width: 108px;
             transition: all 0.2s ease-in-out;
