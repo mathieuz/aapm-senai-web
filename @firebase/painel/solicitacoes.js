@@ -7,6 +7,10 @@ import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebas
 const colecao = collection(db, "Aluno")
 const arrayDocumentos = await getDocs(colecao)
 
+/*Pop-up: 0 > Alerta, 1 > Sucesso.*/
+let popUp = document.getElementsByClassName("popUpAvisos")
+let spanPopUp = document.getElementsByClassName("spanPopUp")
+
 arrayDocumentos.forEach(async (d) => {
     const solicitacao = doc(db, "Aluno", d.id, "solicitacoes", "solicitacao")
     const docSolicitacao = await getDoc(solicitacao)
@@ -173,9 +177,20 @@ setTimeout(() => {
                 obs: "Solicitação Recusada: " + msg
             });
 
-            alert("Solicitação Recusada.")
+            spanPopUp[1].innerHTML = "Solicitação recusada com sucesso."
+            popUp[1].style.display = "flex"
+
+            setTimeout(() => {
+                window.location.href = "../../html/painel/solicitacoes.html"
+            }, 2000)
+
           } else {
-            alert("Detalhe nas observações antes de recusar uma solicitação.")
+            spanPopUp[0].innerHTML = "Detalhe nas observações antes de recusar uma solicitação"
+            popUp[0].style.display = "flex"
+
+            setTimeout(() => {
+                popUp[0].style.display = "none"
+            }, 3000)
           }
         })
 
@@ -191,7 +206,12 @@ setTimeout(() => {
               obs: "Solicitação Confirmada: " + msg
           });
 
-          alert("Mensagem Enviada.")
+          spanPopUp[1].innerHTML = "Solicitação confirmada com sucesso."
+          popUp[1].style.display = "flex"
+
+          setTimeout(() => {
+              window.location.href = "../../html/painel/solicitacoes.html"
+          }, 2000)
         })
 
       })
