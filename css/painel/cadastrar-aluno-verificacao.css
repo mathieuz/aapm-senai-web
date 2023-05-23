@@ -1,0 +1,29 @@
+.icone-verif{
+    pointer-events: none;
+
+    align-self: flex-end;
+    margin-top: -15px;
+    position: absolute;
+
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+
+    display: none;
+}
+
+.alertaInput{
+    border-color: #fec12e!important;
+}
+
+.alertaLabel{
+    color: #fec12e!important;
+}
+
+.sucessoInput{
+    border-color: #0adf7c!important;
+}
+
+.sucessoLabel{
+    color: #0adf7c!important;
+}
