@@ -1,8 +1,8 @@
 import { db, ath } from "../module.js"
 
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
 
-import { addDoc, collection } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"
+import { addDoc, collection, getDoc, doc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"
 
 /********/
 /********/
@@ -16,6 +16,24 @@ let spanPopUp = document.getElementsByClassName("spanPopUp")
 let arrayInput = document.getElementsByClassName("inputCad")
 let arrayLabels = document.getElementsByTagName("label")
 let arrayIcones = document.getElementsByClassName("icone-verif")
+
+//Verifica darkmode.
+const auth = getAuth();
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    let hrefCss = document.head.getElementsByTagName("link")
+    let icoBusca = document.getElementById("icoBusca")
+
+    const adminDoc = doc(db, "Administrador", user.email)
+    const admin = await getDoc(adminDoc)
+
+    if (admin.get("darkMode") == true){
+      hrefCss[0].href = "../../../css/painel/global-dm.css"
+      hrefCss[1].href = "../../../css/painel/cadastrar-aluno-dm.css"
+      
+    }
+  }
+})
 
 /*Padrão Regex dos campos de texto.*/
     //Verifica se o campo é composto apenas por dígitos numéricos de no no mínimo 10 caracteres.

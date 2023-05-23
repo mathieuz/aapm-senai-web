@@ -1,0 +1,194 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin-left: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    width: auto;
+    height: auto;
+    padding-bottom: 25px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+    main select{
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+
+        width: auto;
+
+        border: 2px solid gray;
+        border-radius: 3px;
+        outline: transparent;
+
+        background-color: #3a3a3a!important;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+    main input[type=date]{
+        padding-top: 10px;
+        padding-bottom: 6px;
+        padding-left: 8px;
+
+        width: auto;
+
+        border: 2px solid gray;
+        border-radius: 3px;
+        outline: transparent;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+    main input[type=text], main input[type=email]{
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+
+        width: auto;
+
+        border: 2px solid gray;
+        border-radius: 3px;
+        outline: transparent;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        main input[type=text]:focus, main input[type=date]:focus, main input[type=email]:focus, main select:focus{
+            border: 2px solid #fd0026;
+            outline: transparent;
+        }
+
+    main label{
+        pointer-events: none;
+        position: absolute;
+        display: block;
+
+        margin-left: 8px;
+        margin-top: -10px;
+        padding: 0px;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: #3a3a3a!important;;
+
+        font-weight: 500;
+        font-size: 14px;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+    div input{
+        background-color: #3a3a3a!important;
+    }
+
+        div input:focus + label, main select:focus + label{
+            color: #fd0026;
+        }
+
+    main .div-coluna div, main .div-linha div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main .div-linha, main .div-coluna{
+        margin-bottom: 20px;
+    }
+
+        main .div-linha:last-child, main .div-coluna:last-child{
+            margin-bottom: auto;
+        }
+
+    main .div-linha{
+        display: flex;
+        flex-direction: row;
+    }
+
+        main .div-linha div{
+            margin-right: 20px;
+            width: 100%;
+        }
+
+            main .div-linha div:last-child{
+                margin-right: auto;
+            }
+
+            main .div-coluna{
+                display: flex;
+                flex-direction: column;
+            }
+
+    main .div-coluna{
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+        margin: 10px;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        main .div-coluna div{
+            margin-bottom: 15px;
+        }
+
+            main .div-coluna div:last-child{
+                margin-bottom: auto;
+            }
+
+button{
+    cursor: pointer;
+
+    background-color: #fd0026;
+    color: white;
+
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    width: auto;
+    
+    padding: 8px;
+    border-radius: 2px;
+    border: 2px solid transparent;
+
+    transition: all ease-in-out 0.2s;
+}
+
+    button:hover{
+        background-color: #aa001a;
+    }
+
+@media (max-width: 65rem){
+    html{
+        overflow-x: hidden;
+    }
+
+    body{
+        justify-content: flex-start;
+        background-color: white;
+    }
+
+    main{
+        align-items: stretch;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    main .div-coluna{
+        width: 100%;
+    }
+}

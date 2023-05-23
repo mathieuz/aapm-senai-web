@@ -16,6 +16,8 @@ const inputAlterarFoto = document.getElementById('alterarFoto');
 let popUp = document.getElementsByClassName("popUpAvisos")
 let spanPopUp = document.getElementsByClassName("spanPopUp")
 
+let hrefCss = document.head.getElementsByTagName("link")
+
 inputAlterarFoto.addEventListener('change', function() {
   const file = this.files[0];
 
@@ -52,6 +54,14 @@ onAuthStateChanged(auth, async (user) => {
   if (user) {
     const docRef = doc(db, "Administrador", user.email);
     const admin = await getDoc(docRef)
+
+    //Verifica darkmode.
+    if (admin.get("darkMode") == true){
+      hrefCss[0].href = "../../../css/painel/global-dm.css"
+
+      document.getElementsByClassName("icone")[0].src = "../../img/icones/icon-email-dm.png"
+      document.getElementsByClassName("icone")[1].src = "../../img/icones/icon-telefone-dm.png"
+    }
 
     document.getElementById("nomeAdmin").innerHTML = admin.get("nome")
     document.getElementById("emailAdmin").innerHTML = admin.get("email")

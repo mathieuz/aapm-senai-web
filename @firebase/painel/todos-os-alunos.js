@@ -1,8 +1,11 @@
-import { db, storage } from "../module.js"
+import { db, storage, ath } from "../module.js"
 
-import { getDocs, collection, query, where, doc, updateDoc, getCountFromServer } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getDocs, collection, query, where, doc, updateDoc, getCountFromServer, getDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
+
+/* Importação dos módulos de conexão do Firebase. */
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
 
 //Conta quantidade de registros de alunos ao todo.
 const coll = collection(db, "Aluno");
@@ -15,6 +18,24 @@ const arrayDocumentos = await getDocs(colecao)
 /*Pop-up: 0 > Alerta, 1 > Sucesso.*/
 let popUp = document.getElementsByClassName("popUpAvisos")
 let spanPopUp = document.getElementsByClassName("spanPopUp")
+
+//Verifica darkmode.
+const auth = getAuth();
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    let hrefCss = document.head.getElementsByTagName("link")
+    let icoBusca = document.getElementById("icoBusca")
+
+    const adminDoc = doc(db, "Administrador", user.email)
+    const admin = await getDoc(adminDoc)
+
+    if (admin.get("darkMode") == true){
+      hrefCss[0].href = "../../css/painel/global-dm.css"
+      hrefCss[2].href = "../../css/painel/todos-os-alunos-dm.css"
+      icoBusca.src = "../../img/icones/busca-dm.png"
+    }
+  }
+})
 
 arrayDocumentos.forEach(doc => {
     

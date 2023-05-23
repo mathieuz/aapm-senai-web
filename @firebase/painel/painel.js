@@ -14,6 +14,8 @@ let hrefCss = document.head.getElementsByTagName("link")[0]
 let logoSenai = document.getElementById("senaiLogo")
 let imgIconAdmin = document.getElementById("imgIconAdmin")
 let imgAdmin = document.getElementById("imgAdmin")
+let iframe = document.getElementById("iframePainel")
+let icone = document.getElementsByClassName("icone")
 
 const auth = getAuth();
 onAuthStateChanged(auth, async (user) => {
@@ -21,6 +23,7 @@ onAuthStateChanged(auth, async (user) => {
     const adminDoc = doc(db, "Administrador", user.email)
     const admin = await getDoc(adminDoc)
 
+    //Se darkmode está ativado...
     if (admin.get("darkMode") == true){
       hrefCss.href = "css/painel/painel-dm.css"
       logoSenai.src = "./img/senai-logo-branco.png"
@@ -52,6 +55,11 @@ onAuthStateChanged(auth, async (user) => {
         await updateDoc(alterarDarkMode, {
           darkMode: false
         })
+
+        setTimeout(() => {
+          iframe.src = iframe.src
+        }, 1000)
+        
 
       }
     }
