@@ -1,5 +1,5 @@
 
-@media(max-width:420px){
+@media(max-width:450px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -31,7 +31,7 @@
     #modalRegistro{
         width: 385px;
     
-        margin-top: -99px;
+        margin-top: -10px;
 
     }
     #modalRegistro #imgAluno{
@@ -288,7 +288,7 @@
 
     #modalRegistro{
         width: 430px;
-        margin-top: -150px;
+        margin-top: -110px;
     }
     #modalRegistro #imgAluno{
         margin-left: 170px ;
