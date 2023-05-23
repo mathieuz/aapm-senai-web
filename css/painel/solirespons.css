@@ -1,5 +1,5 @@
 
-@media(max-width:450px){
+@media(max-width:600px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -29,16 +29,16 @@
     }
 
     #modalRegistro{
-        width: 385px;
+        width: 480px;
     
-        margin-top: -10px;
+        margin-top: -100px;
 
     }
     #modalRegistro #imgAluno{
         width: 100px;
         height:100px;
         border-radius: 100%;
-        margin-left: 155px;
+        margin-left: 200px;
    }
 
 
@@ -46,7 +46,7 @@
         font-size:15px;
         text-align: center;
         width: 300px;
-        margin-left: 60px;
+        margin-left: 140px;
         margin-top: 20px;
     }
    
@@ -107,19 +107,18 @@
         .divInput{
             display: flex;
             flex-direction: column;
-            padding-left: 11px;
-            margin-bottom: 1%;
+            padding-left: 60px;
         }
         .divTextArea{
             display: flex;
             flex-direction: column;
-            padding-left:11px;
+            padding-left:60px;
         }
     
         .divInput input{
             cursor: auto;
-            margin-top: 24%;
-            width: 165px;
+            margin-top: 11%;
+            width: 440px;
             
             border: 2px solid gray;
             border-radius: 3px;
@@ -131,7 +130,7 @@
         .divTextArea TextArea{
             cursor: auto;
             margin-top:10%;
-            width: 365px;
+            width: 450px;
             resize: none;
             border: 2px solid gray;
             border-radius: 3px;
@@ -236,8 +235,8 @@
             border-color: rgb(204, 204, 204);
             color: black;
             border-radius: 5px;
-            width: 45%;
-            margin-left: 12px;
+            width: 40%;
+            margin-left: 70px;
             margin-top: 30px;
         }
 
@@ -246,7 +245,7 @@
         border-color: #f01313;
         color: white;
         border-radius: 5px;
-        width: 45%;
+        width: 40%;
         margin: 0 10px auto;
     }
     
@@ -256,7 +255,7 @@
 
 
     /*===========================================================================================================*/
-    @media(min-width:450px) and (max-width:850px){
+    @media(min-width:601px) and (max-width:850px){
 
     .registroItem{
         display: flex;
