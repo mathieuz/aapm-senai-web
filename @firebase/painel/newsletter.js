@@ -12,6 +12,23 @@ import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/fi
 let popUp = document.getElementsByClassName("popUpAvisos")
 let spanPopUp = document.getElementsByClassName("spanPopUp")
 
+//Verifica darkmode.
+const auth = getAuth();
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    let hrefCss = document.head.getElementsByTagName("link")
+    let icoBusca = document.getElementById("icoBusca")
+
+    const adminDoc = doc(db, "Administrador", user.email)
+    const admin = await getDoc(adminDoc)
+
+    if (admin.get("darkMode") == true){
+      hrefCss[0].href = "../../css/painel/global-dm.css"
+      hrefCss[2].href = "../../css/painel/newsletter-dm.css"
+    }
+  }
+})
+
 //Enviar Foto
 const imagem = document.getElementById('fotoPubli');
 const inputImagem = document.getElementById('arquivo');

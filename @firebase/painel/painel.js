@@ -47,6 +47,10 @@ onAuthStateChanged(auth, async (user) => {
           darkMode: true
         })
 
+        setTimeout(() => {
+          location.reload()
+        }, 1000)
+
       } else if (hrefCss.href.includes("css/painel/painel-dm.css")){
         hrefCss.href = "css/painel/painel.css"
         logoSenai.src = "./img/senai-logo.png"
@@ -57,7 +61,7 @@ onAuthStateChanged(auth, async (user) => {
         })
 
         setTimeout(() => {
-          iframe.src = iframe.src
+          location.reload()
         }, 1000)
         
 

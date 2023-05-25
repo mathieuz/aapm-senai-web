@@ -1,0 +1,135 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    width: auto;
+    height: 100%;
+
+    margin-bottom: 40px;
+}
+
+    section div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+section input{
+    width: 600px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-left: 10px;
+
+    border: 1.5px solid white;
+
+    background-color: #3a3a3a!important;
+
+    transition: all ease-in-out 0.3s;
+}
+
+section label{
+    pointer-events: none;
+    padding: 1px;
+    border-radius: 10px;
+    background-color: #3a3a3a!important;
+
+    position: absolute;
+    margin-top: -12px;
+    margin-left: 10px;
+
+    transition: all ease-in-out 0.3s;
+}
+
+    section input:focus{
+        outline-color: red;
+        border-color: transparent;
+    }
+
+    section input:focus + label{
+        color: red;
+    }
+
+    section textarea{
+        resize: none;
+        height: 300px;
+        padding: 10px;
+        padding-top: 15px;
+        box-sizing: border-box;
+
+        border: 1px solid white;
+
+        background-color: #3a3a3a!important;
+
+        transition: all ease-in-out 0.3s;
+    }
+
+    section textarea:focus{
+        outline-color: red;
+        border-color: transparent;
+    }
+
+    section textarea:focus + label{
+        color: red;
+    }
+
+    section #inserirImagem{
+        position: relative;
+        cursor: pointer;
+        pointer-events: all;
+        border-color: transparent;
+        border-radius: 10px;
+        background-color: rgb(141, 141, 141)!important;
+        color: white;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        width: auto;
+        text-align: center;
+        margin-left: 0px;
+
+        transition: all ease-in-out 0.3s;
+    }
+
+    section #inserirImagem:hover{
+        background-color: rgb(104, 104, 104);
+    }
+
+    section #enviarPublicacao{
+        cursor: pointer;
+        border-color: transparent;
+        border-radius: 10px;
+        background-color: rgb(223, 15, 0);
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 600;
+
+        transition: all ease-in-out 0.3s;
+    }
+
+    section #enviarPublicacao:hover{
+        background-color: rgb(219, 84, 74);
+    }
+
+    input[type=file]{
+        display: none;
+    }
+
+    #fotoPubli{
+        display: none;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        align-self: center;
+    }

@@ -4,7 +4,6 @@ import { getDocs, collection, query, where, doc, updateDoc, getCountFromServer, 
 
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
 
-/* Importação dos módulos de conexão do Firebase. */
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
 
 //Conta quantidade de registros de alunos ao todo.
@@ -18,6 +17,8 @@ const arrayDocumentos = await getDocs(colecao)
 /*Pop-up: 0 > Alerta, 1 > Sucesso.*/
 let popUp = document.getElementsByClassName("popUpAvisos")
 let spanPopUp = document.getElementsByClassName("spanPopUp")
+
+let icone = document.getElementsByClassName("icone")
 
 //Verifica darkmode.
 const auth = getAuth();
@@ -33,6 +34,11 @@ onAuthStateChanged(auth, async (user) => {
       hrefCss[0].href = "../../css/painel/global-dm.css"
       hrefCss[2].href = "../../css/painel/todos-os-alunos-dm.css"
       icoBusca.src = "../../img/icones/busca-dm.png"
+
+      icone[0].src = "../../img/icones/icon-email-dm.png"
+      icone[1].src = "../../img/icones/icon-telefone-dm.png"
+      icone[2].src = "../../img/icones/icon-curso-dm.png"
+      icone[3].src = "../../img/icones/icon-dtnascimento-dm.png"
     }
   }
 })

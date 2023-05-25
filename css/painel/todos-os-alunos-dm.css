@@ -178,14 +178,15 @@ th { text-transform: uppercase; }
         padding: 0px 10px;
         border-radius: 100%;
 
-        background-color: rgb(120, 120, 120);
+        background-color: white;
+        color: black!important;
         
         transition: all 0.2s ease-in-out;
     }
 
         #botaoFechar:hover{
             background-color: #fd0026;
-            color: white;
+            color: white!important;
         }   
 
     #modalRegistro .itemCadastral{
@@ -288,13 +289,33 @@ th { text-transform: uppercase; }
         padding: 8px;
         border-radius: 100%;
 
-        background-color: rgb(120, 120, 120);
+        background-color: white;
 
         transition: all ease-in-out 0.2s;
     }
 
         #botaoEditar:hover{
             background-color: rgb(47, 191, 47);
+        }
+
+    #botaoApagar{
+        position: absolute;
+        left: -20px;
+        bottom: -15px;
+
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        padding: 8px;
+        border-radius: 100%;
+
+        background-color: white;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        #botaoApagar:hover{
+            background-color: rgb(199, 178, 255);
         }
 
     /**/

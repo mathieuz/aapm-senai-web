@@ -34,7 +34,7 @@ input[type=file]{
 main{
     align-self: center;
     padding: 10px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.39);
+    background-color: rgb(79, 79, 79);
     border-radius: 10px;
     margin-top: -40px;
 
@@ -131,6 +131,33 @@ main{
             background-color: rgb(255, 128, 128);
         }
 
+    #botoesNewsletter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #verTodosOsPosts{
+        cursor: pointer;
+        margin-top: 20px;
+        background-color: rgb(133, 133, 133);
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: all ease-in-out 0.2s;
+
+        margin-left: 10px;
+    }
+
+    #verTodosOsPosts:hover{
+        background-color: rgb(114, 114, 114);
+    }
+
     #criarPostagem{
         cursor: pointer;
         margin-top: 20px;
@@ -165,7 +192,7 @@ main{
 
     position: fixed;
 
-    background-color: rgb(120, 120, 120)!important;
+    background-color: rgb(86, 86, 86);
     box-shadow: 1px 1px 5000px 5000px rgba(0, 0, 0, 0.486);
     border-radius: 10px;
 
@@ -206,8 +233,8 @@ main{
         padding-left: 4px;
 
         font-size: 14px;
-        color: gray;
-        background-color: white;
+        color: white;
+        background-color: rgb(86, 86, 86);
 
         pointer-events: none;
 
@@ -224,9 +251,15 @@ main{
         text-align: start;
         font-size: 16px;
 
+        background-color: rgb(86, 86, 86);
+
         outline-color: transparent;
 
         transition: all 0.3s;
+    }
+
+    #modalCadAdmin input:hover{
+        outline-color: red;
     }
 
     #modalCadAdmin input:hover, #modalCadAdmin input:focus{
@@ -276,6 +309,7 @@ main{
             padding: 0px 10px;
             border-radius: 100%;
     
+            color: black!important;
             background-color: white;
             
             transition: all 0.2s ease-in-out;
@@ -283,9 +317,10 @@ main{
 
         #botaoFechar:hover{
             background-color: #fd0026;
-            color: white;
+            color: white!important;
         }   
 
-        .btnPerfil:last-child{
-            margin-top: 10px!important;
+        .btnPerfil{
+            text-align: center;
+            width: 100%;
         }

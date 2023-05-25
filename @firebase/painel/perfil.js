@@ -58,6 +58,7 @@ onAuthStateChanged(auth, async (user) => {
     //Verifica darkmode.
     if (admin.get("darkMode") == true){
       hrefCss[0].href = "../../../css/painel/global-dm.css"
+      hrefCss[1].href = "../../../css/painel/perfil-dm.css"
 
       document.getElementsByClassName("icone")[0].src = "../../img/icones/icon-email-dm.png"
       document.getElementsByClassName("icone")[1].src = "../../img/icones/icon-telefone-dm.png"

@@ -1,8 +1,10 @@
-import { db, storage } from "../module.js"
+import { db, storage, ath } from "../module.js"
 
 import { getDocs, collection, query, where, doc, updateDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
+
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
 
 const colecao = collection(db, "Aluno")
 const arrayDocumentos = await getDocs(colecao)
@@ -10,6 +12,23 @@ const arrayDocumentos = await getDocs(colecao)
 /*Pop-up: 0 > Alerta, 1 > Sucesso.*/
 let popUp = document.getElementsByClassName("popUpAvisos")
 let spanPopUp = document.getElementsByClassName("spanPopUp")
+
+//Verifica darkmode.
+const auth = getAuth();
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    let hrefCss = document.head.getElementsByTagName("link")
+    let icoBusca = document.getElementById("icoBusca")
+
+    const adminDoc = doc(db, "Administrador", user.email)
+    const admin = await getDoc(adminDoc)
+
+    if (admin.get("darkMode") == true){
+      hrefCss[0].href = "../../css/painel/global-dm.css"
+      hrefCss[1].href = "../../css/painel/solicitacoes-dm.css"
+    }
+  }
+})
 
 arrayDocumentos.forEach(async (d) => {
     const solicitacao = doc(db, "Aluno", d.id, "solicitacoes", "solicitacao")

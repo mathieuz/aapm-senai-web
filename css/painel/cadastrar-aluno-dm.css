@@ -69,8 +69,8 @@ main{
     }
 
         main input[type=text]:focus, main input[type=date]:focus, main input[type=email]:focus, main select:focus{
-            border: 2px solid #fd0026;
-            outline: transparent;
+            border: 2px solid #fd0026!important;
+            outline: transparent!important;
         }
 
     main label{
@@ -96,7 +96,7 @@ main{
     }
 
         div input:focus + label, main select:focus + label{
-            color: #fd0026;
+            color: #fd0026!important;
         }
 
     main .div-coluna div, main .div-linha div{
