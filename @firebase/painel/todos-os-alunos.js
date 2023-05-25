@@ -1,6 +1,6 @@
 import { db, storage, ath } from "../module.js"
 
-import { getDocs, collection, query, where, doc, updateDoc, getCountFromServer, getDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getDocs, collection, query, where, doc, updateDoc, getCountFromServer, getDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js";
 
@@ -212,6 +212,18 @@ for (let i = 0; i < arrayRegistro.length; i++){
             sectionRegistro.style.pointerEvents = "all"
           }
         }, 500)
+
+        //Adicionando função de remover um aluno.
+        document.getElementById("botaoApagar").addEventListener("click", async () => {
+          await deleteDoc(doc(db, "Aluno", `${document.getElementById("idAluno").value}`));
+
+          spanPopUp[1].innerHTML = "O aluno foi removido com sucesso!"
+          popUp[1].style.display = "flex"
+      
+          setTimeout(() => {
+              window.location.href = window.location.href
+          }, 2000)
+        })
     })
 }
 

@@ -292,6 +292,26 @@ th { text-transform: uppercase; }
             background-color: lightgreen;
         }
 
+    #botaoApagar{
+        position: absolute;
+        left: -20px;
+        bottom: -15px;
+
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        padding: 8px;
+        border-radius: 100%;
+
+        background-color: white;
+
+        transition: all ease-in-out 0.2s;
+    }
+
+        #botaoApagar:hover{
+            background-color: rgb(199, 178, 255);
+        }
+
     /**/
 
     .divInput{
