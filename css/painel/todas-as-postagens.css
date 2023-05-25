@@ -1,0 +1,99 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.divPostagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    margin-bottom: 30px;
+
+    border-radius: 10px;
+    background-color: rgb(211, 229, 255);
+
+    width: 660px;
+}
+
+.adminFotoPostagem{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.postagemHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+    .postagemHeader .linha{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: flex-start;
+    }
+
+.nomeAdminPost{
+    font-weight: 600;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.dataPost{
+    color: gray;
+    margin-left: 8px;
+}
+
+.postagemBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+    .tituloPostagem{
+        align-self: flex-start;
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 22px;
+        width: auto;
+    }
+
+    .descricaoPostagem{
+        align-self: flex-start;
+    }
+
+    .imgPost{
+        object-fit: cover;
+        margin-top: 12px;
+        border-radius: 10px;
+        width: 100%;
+        height: 500px;
+    }
+
+    .removerPost{
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        background-color: rgb(217, 0, 0);
+        text-transform: capitalize;
+        font-weight: 600;
+        color: white;
+        transition: all ease-in-out 0.3s;
+    }
+
+    .removerPost:hover{
+        background-color: rgb(145, 0, 0);
+    }

@@ -131,6 +131,33 @@ main{
             background-color: rgb(255, 128, 128);
         }
 
+    #botoesNewsletter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #verTodosOsPosts{
+        cursor: pointer;
+        margin-top: 20px;
+        background-color: rgb(175, 175, 175);
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: all ease-in-out 0.2s;
+
+        margin-left: 10px;
+    }
+
+    #verTodosOsPosts:hover{
+        background-color: rgb(114, 114, 114);
+    }
+
     #criarPostagem{
         cursor: pointer;
         margin-top: 20px;
@@ -286,6 +313,7 @@ main{
             color: white;
         }   
 
-        .btnPerfil:last-child{
-            margin-top: 10px!important;
+        .btnPerfil{
+            text-align: center;
+            width: 100%;
         }

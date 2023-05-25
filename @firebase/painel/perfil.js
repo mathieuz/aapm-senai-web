@@ -151,3 +151,8 @@ document.getElementById("adicionarAdmin").addEventListener("click", () => {
 document.getElementById("criarPostagem").addEventListener("click", () => {
   window.location.href = "../../html/painel/newsletter.html"
 })
+
+//Todos os posts
+document.getElementById("verTodosOsPosts").addEventListener("click", () => {
+  window.location.href = "../../html/painel/todas-as-postagens.html"
+})
