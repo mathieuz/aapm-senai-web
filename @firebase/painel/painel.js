@@ -85,18 +85,17 @@ onAuthStateChanged(auth, async (user) => {
                 await updateDoc(removeSenha, {
                   senhaAdmin: deleteField()
                 });
-              
-                alert("Admin novo, senha removida do banco.")
+
               } else {
-                alert("Nada acontece feijoada.")
+
               }
               
               const auth = getAuth();
               signOut(auth).then(() => {
-                alert("Saindo...")
+
                 document.location.href = "./login.html"
               }).catch((error) => {
-                alert("Um erro ocorreu ao deslogar.")
+
               });
             })
 
@@ -117,7 +116,7 @@ onAuthStateChanged(auth, async (user) => {
                       alert(error)
                     });
               
-                } catch (error) { alert(error) }
+                } catch {}
               }
             });
     
@@ -134,7 +133,7 @@ onAuthStateChanged(auth, async (user) => {
     })
 
   } else {
-    alert("Nenhum admin logado.")
+
 
   }
 
@@ -149,8 +148,8 @@ onAuthStateChanged(auth, async (user) => {
         document.getElementById("imgIconAdmin").src = `${url}`
       })
       .catch((error) => {
-        alert(error)
+
       });
 
-  } catch (error) { alert(error) }
+  } catch {}
 });
