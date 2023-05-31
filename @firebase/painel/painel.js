@@ -113,7 +113,7 @@ onAuthStateChanged(auth, async (user) => {
                       document.getElementById("imgAdmin").src = `${url}`
                     })
                     .catch((error) => {
-                      alert(error)
+
                     });
               
                 } catch {}

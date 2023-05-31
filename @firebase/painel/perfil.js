@@ -38,9 +38,14 @@ inputAlterarFoto.addEventListener('change', function() {
         const uploadTask = uploadBytes(storageRef, file);
 
         uploadTask.then((snapshot) => {
-            alert("Upload completo");
+            spanPopUp[1].innerHTML = "Foto de perfil definida com sucesso."
+            popUp[1].style.display = "flex"
+
+            setTimeout(() => {
+                window.location.href = window.location.href
+            }, 2000)
           }).catch((error) => {
-            alert("Erro")
+
           });
       }
     })
@@ -79,7 +84,7 @@ onAuthStateChanged(auth, async (user) => {
           document.getElementById("imgPerfil").src = `${url}`
         })
         .catch((error) => {
-          alert(error)
+
         });
 
     } catch (error) { alert(error) }
