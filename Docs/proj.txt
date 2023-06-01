@@ -1,0 +1,63 @@
+@proj-obrigacoes-tributarias - todos os arquivos-fonte de cada declaração.
+
+> Parte do processo em que os arquivos lidos (todos os arquivos .pdf) tem suas 
+declarações identificadas e movidas para suas pastas de acordo com a data extraída.
+
+-------------------------------------------------------------------------------------
+
+[Estrutura de Arquivo-fonte]:
+
+	[Constantes/variáveis nas primeiras linhas do arquivo]
+
+	- NOME_DECLARACAO: Consta nos diretórios da declaração específica.
+	- DATA_VENCIMENTO: Data de vencimento da declaração. Informação extraída
+	do banco de dados.
+	- DIAS_ANTES_DO_PRAZO: Determina os dias próximos da data de vencimento.
+	- QUANTIDADE_ARQUIVOS: quantidade de arquivos referente à declaração.
+	- DATA_ATUAL: define a data atual no momento em que roda o código.
+	- CHAVE_DE_PESQUISA: define a chave de pesquisa utilizada para identificar
+	a declaração no conteúdo de texto de cada arquivo.
+	- DATA_REGEX: recebe a data identificada no conteúdo de texto de cada arquivo.
+	- list_meses: lista de meses por extenso. Define o mês da declaração que foi
+	identificado no .pdf da declaração e o diretório do mês que o arquivo será
+	movido.
+	- mesData, anoData: recebem os valores de data extraídos do pdf.
+	- mesDiretorio: nome do diretório que é referente ao mês dos valores de
+	data (mesData, anoData).
+
+	[Diferenças e pontos importantes]
+	- As datas de mês, especificamente, extraídas do PDF, nem sempre seguem
+	sendo numéricas (de 1 à 12). Algumas são encontradas por extenso. ("Jan",
+	"Janeiro", etc.)
+	- Arquivos podem ou ser lidos pelo conteúdo de texto extraído ou lidos
+	pela imagem da página específica.
+	- A data mais antiga encontrada no PDF é a que deve ser extraída e usada
+	como parâmetro para mover os arquivos para suas pastas específicas (?).
+
+
+-------------------------------------------------------------------------------------
+
+[Estrutura de Pastas]:
+
+	- Arquivos de Amostra: todos os arquivos de declarações com as pastas
+	referentes as declarações, com diretórios onde os arquivos identificados
+	serão movidos.
+
+	- Terminados: arquivos-fonte de cada declaração que estão terminados.
+	
+	- Teste: arquivos-fonte de cada declaração que estão em teste e outros 
+	arquivos de testes específicos.
+
+	- Úteis: testes e outros arquivos úteis que são parte do processo.
+
+-------------------------------------------------------------------------------------
+
+[Erros de execução]
+
+1) ValueError: invalid literal for int() with base 10 [...] - quando o valor capturado
+no regex de data e utilizado para tirar o mês por extenso do listMeses é um valor 
+vazio. Isso significa que a procura pela data utilizando o regex não especificou
+todos os possíveis valores presentes dentro de um arquivo, que retorna um vazio que não
+é um valor inteiro.
+
+2) IndexError: list index out of range [...] - mesma ocorrência do anterior. (?)

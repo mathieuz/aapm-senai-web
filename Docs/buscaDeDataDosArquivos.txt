@@ -1,0 +1,17 @@
+Certificado de Transmissão do Arquivo Eletrônico - Referência
+Aceitar Classificação - Mês/Ano
+Licenciamento Integrado - Data da Solicitação
+DCTF - Mês/Ano
+DCTFWeb - Período Apuração
+GISS Serviços Tomados/Tomador - Referência, Exercício
+GISS Serviços Prestados - Exercício
+Detalhes da Classificação por Critério/Nos Conforme - Período Avaliado
+SPED/EFD Contricuições - Período de Apuração, Período
+Gia - Ouvidoria | Transparencia
+Documento de Arrecadação de Receitas Federais - Período de Apuração
+DAM - Documento de Arrecadação Municipal - Competência
+GISS Civil - NESTA DATA PROCEDEU-SE O ENCERRAMENTO DA ESCRITURAÇÃO MENSAL DO MÊS DE
+FCI - Data da Transmissão
+Dirf - Ano-calendário (captura somente do ano)
+
+ECD, ECF, IBGE (todos os arquivos da pasta Contabilidade) - não encontrado.
