@@ -1,4 +1,5 @@
-@media(max-width: 200px){
+
+@media(max-width:600px){
     .registroItem{
         display: flex;
         flex-direction: row;
@@ -28,29 +29,27 @@
     }
 
     #modalRegistro{
-        width: 96%;
-        height: 85%;
-        margin: 0 auto;
+        width: 480px;
+    
+        margin-top: -100px;
 
     }
     #modalRegistro #imgAluno{
-        margin: 0 auto;
-        width: 55%;
-        
-    }
-    #modalRegistro #nomeAluno{
-        font-size: 25px;
-        font-weight: 500;
-        font-size: 10px;
-        width: 130px;
-        justify-self: flex-start;
-        margin: auto;
-        margin-left: 15%;
+        width: 100px;
+        height:100px;
+        border-radius: 100%;
+        margin-left: 200px;
+   }
 
+
+    #modalRegistro #nomeAluno{
+        font-size:15px;
+        text-align: center;
+        width: 300px;
+        margin-left: 140px;
+        margin-top: 20px;
     }
    
-  
-
     #botaoFechar{
         display: block;
         cursor: pointer;
@@ -108,23 +107,43 @@
         .divInput{
             display: flex;
             flex-direction: column;
-            margin-left: 4%;
-            margin-bottom: 1%;
+            padding-left: 60px;
+        }
+        .divTextArea{
+            display: flex;
+            flex-direction: column;
+            padding-left:60px;
         }
     
         .divInput input{
             cursor: auto;
-            margin-top: 24%;
-            width: 180px;
-    
+            margin-top: 11%;
+            width: 440px;
+            
             border: 2px solid gray;
             border-radius: 3px;
             outline: transparent;
     
             transition: all ease-in-out 0.2s;
         }
+        
+        .divTextArea TextArea{
+            cursor: auto;
+            margin-top:10%;
+            width: 450px;
+            resize: none;
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+
+            transition: all ease-in-out 0.2s;
+        }
     
             .divInput input:hover{
+                border-color: rgb(155 194 249);
+            }
+
+            .divTextArea Textarea:hover{
                 border-color: rgb(155 194 249);
             }
     
@@ -141,7 +160,26 @@
     
             transition: all ease-in-out 0.2s;
         }
+        
+        main TextArea[type=text]{
+            padding-top: 10px;
+            padding-bottom: 6px;
+            padding-left: 8px;
+
+            width: auto;
+
+            border: 2px solid gray;
+            border-radius: 3px;
+            outline: transparent;
+
+        }
     
+        
+        textarea{
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
         .divInput label{
             pointer-events: none;
             margin-left: 2%;
@@ -149,14 +187,35 @@
             background-color: white;    
             transition: all 0.2s ease-in-out;
         }
-    
+        #labelArea{
+            width: 110px;
+        }
+        
+        .divTextArea label{
+            pointer-events: none;
+            margin-left: 2.5%;
+            margin-top: 6%;
+            background-color: white;
+            width: 30%;
+            transition: all 0.2s ease-in-out;
+            
+        }
+
         .divInput input:hover + label{
+            color: rgb(155 194 249);
+        }
+
+        .divTextArea TextArea:hover + label{
             color: rgb(155 194 249);
         }
     
         .inputDados{
             margin-top: 10px;
         }
+        .TextAreaDados{
+            margin-top: 10px;
+        }
+
 
         .descer{
             display: flex;
@@ -171,22 +230,32 @@
             flex-direction: row;
         }
 
-        
+        #recusar{
+            background-color: rgb(221, 221, 221);
+            border-color: rgb(204, 204, 204);
+            color: black;
+            border-radius: 5px;
+            width: 40%;
+            margin-left: 70px;
+            margin-top: 30px;
+        }
+
     #confirmar{
         background-color: #f01313;
         border-color: #f01313;
         color: white;
         border-radius: 5px;
-        width: 106%;
-        margin-left: -30%;
+        width: 40%;
+        margin: 0 10px auto;
     }
     
+      
 
 }
 
 
     /*===========================================================================================================*/
-    @media(max-width:471px){
+    @media(min-width:601px) and (max-width:850px){
 
     .registroItem{
         display: flex;
@@ -217,25 +286,24 @@
     }
 
     #modalRegistro{
-        width: 96%;
-        height: 70%;
-        margin: 0 auto;
-
+        width: 430px;
+        margin-top: -110px;
     }
     #modalRegistro #imgAluno{
-        margin-left: 185% ;
-        width: 55%;
-        margin-top: 0%;
+        margin-left: 170px ;
+        width: 110px;
+        height: 110px;
+        margin-top: 100px;
         
     }
     #modalRegistro #nomeAluno{
         font-size: 25px;
         font-weight: 500;
-        font-size: 14px;
-        width: 150px;
+        font-size: 15px;
+        width: 300px;
         justify-self: flex-start;
-        margin: auto;
-        margin-left: 100%;
+        margin-top: 20px;
+        margin-left: 80px;
 
     }
    
@@ -296,21 +364,20 @@
         }
 
         .divInput{
-            display: flex;
-            flex-direction: column;
-            margin-left: 6%;
+        padding-top:10%;
+        margin-left:4%;
         }
-
+      
         .divTextArea{
             display: flex;
             flex-direction: column;
-            margin-left:6% ;
+            margin-left: 4% ;
         }
     
         .divInput input{
             cursor: auto;
-            margin-top: 25%;
-            width: 180px;
+            margin-top: 2%;
+            width: 390px;
     
             border: 2px solid gray;
             border-radius: 3px;
@@ -321,8 +388,8 @@
 
         .divTextArea TextArea{
             cursor: auto;
-            margin-top:10%;
-            width: 408px;
+            margin-top:5%;
+            width: 405px;
 
             border: 2px solid gray;
             border-radius: 3px;
@@ -379,7 +446,7 @@
         .divInput label{
             pointer-events: none;
             margin-left: 2%;
-            margin-top: 8%;
+            margin-top: -1%;
             background-color: white;    
             transition: all 0.2s ease-in-out;
         }
@@ -387,9 +454,9 @@
         .divTextArea label{
             pointer-events: none;
             margin-left: 2.5%;
-            margin-top: 6%;
+            margin-top: 2%;
             background-color: white;
-            width: 30%;
+            width: 108px;
             transition: all 0.2s ease-in-out;
             
         }
@@ -411,8 +478,8 @@
         .descer{
             display: flex;
             flex-direction: column;
-            margin-top: 60px;
-            margin-left: -32%;
+            margin-top: 70px;
+            margin-left: -125px;
        
         }
 
@@ -422,17 +489,32 @@
         }
 
         
+        #recusar{
+            background-color: rgb(221, 221, 221);
+            border-color: rgb(204, 204, 204);
+            color: black;
+            border-radius: 5px;
+            width: 44%;
+            margin: 0 auto;
+            margin-left: 28px;
+            margin-top: 30px;
+        }
+
     #confirmar{
         background-color: #f01313;
         border-color: #f01313;
         color: white;
         border-radius: 5px;
-        width: 101%;
-        margin-left: 5%;
-        margin-top: 8%;
+        width: 44%;
+        margin: auto;
+        margin-left: 15px;
+
+    }
+    .botoes{
+        margin-left:5px;
     }
     
-
+    
 }
     
         /*===========================================================================================================*/
