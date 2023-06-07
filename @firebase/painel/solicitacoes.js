@@ -154,16 +154,25 @@ setTimeout(() => {
           document.getElementsByClassName("inputDados")[0].value = docSolicitacao.get("material") == true ? "Solicitado" : "Não Solicitado"
 
           document.getElementsByClassName("inputDados")[1].value = docSolicitacao.get("blusao") == true ? "Solicitado - " : "Não Solicitado"
-          document.getElementsByClassName("inputDados")[1].value += docSolicitacao.get("tamanhoBlusa") == "tamanho " ? " tamanho P - " : `${docSolicitacao.get("tamanhoBlusa")} `
-          document.getElementsByClassName("inputDados")[1].value += docSolicitacao.get("qntBlusa") == 0 ? "Quantidade: 1" : `Quantidade: ${docSolicitacao.get("qntBlusa")}`
+
+          if (document.getElementsByClassName("inputDados")[1].value != "Não Solicitado"){
+            document.getElementsByClassName("inputDados")[1].value += docSolicitacao.get("tamanhoBlusa") == "tamanho " ? " tamanho P - " : `${docSolicitacao.get("tamanhoBlusa")} `
+            document.getElementsByClassName("inputDados")[1].value += docSolicitacao.get("qntBlusa") == 0 ? "Quantidade: 1" : `Quantidade: ${docSolicitacao.get("qntBlusa")}`
+          }
 
           document.getElementsByClassName("inputDados")[2].value = docSolicitacao.get("camiseta") == true ? "Solicitado - " : "Não Solicitado"
-          document.getElementsByClassName("inputDados")[2].value += docSolicitacao.get("tamanhoCamisa") == "tamanho " ? " tamanho P - " : `${docSolicitacao.get("tamanhoCamisa")} `
-          document.getElementsByClassName("inputDados")[2].value += docSolicitacao.get("qntCamisa") == 0 ? "Quantidade: 1" : `Quantidade: ${docSolicitacao.get("qntCamiseta")}`
+
+          if (document.getElementsByClassName("inputDados")[2].value != "Não Solicitado"){
+            document.getElementsByClassName("inputDados")[2].value += docSolicitacao.get("tamanhoCamisa") == "tamanho " ? " tamanho P - " : `${docSolicitacao.get("tamanhoCamisa")} `
+            document.getElementsByClassName("inputDados")[2].value += docSolicitacao.get("qntCamisa") == 0 ? "Quantidade: 1" : `Quantidade: ${docSolicitacao.get("qntCamiseta")}`
+          }
 
           document.getElementsByClassName("inputDados")[3].value = docSolicitacao.get("jaleco") == true ? "Solicitado - " : "Não Solicitado"
-          document.getElementsByClassName("inputDados")[3].value += docSolicitacao.get("tamanhoJaleco") == "tamanho " ? " tamanho P - " : `${docSolicitacao.get("tamanhoJaleco")} `
-          document.getElementsByClassName("inputDados")[3].value += docSolicitacao.get("qntJaleco") == 0 ? "Quantidade: 1" : `Quantidade: ${docSolicitacao.get("qntCamiseta")}`
+
+          if (document.getElementsByClassName("inputDados")[3].value != "Não Solicitado"){
+            document.getElementsByClassName("inputDados")[3].value += docSolicitacao.get("tamanhoJaleco") == "tamanho " ? " tamanho P - " : `${docSolicitacao.get("tamanhoJaleco")} `
+            document.getElementsByClassName("inputDados")[3].value += docSolicitacao.get("qntJaleco") == 0 ? "Quantidade: 1" : `Quantidade: ${docSolicitacao.get("qntCamiseta")}`
+          }
 
           document.getElementsByClassName("inputDados")[4].value = docSolicitacao.get("chave") == true ? "Solicitado" : "Não Solicitado"
 
