@@ -28,9 +28,8 @@ onAuthStateChanged(auth, async (user) => {
     const admin = await getDoc(adminDoc)
 
     if (admin.get("darkMode") == true){
-      hrefCss[0].href = "../../../css/painel/global-dm.css"
-      hrefCss[1].href = "../../../css/painel/cadastrar-aluno-dm.css"
-      
+      hrefCss[0].href = "../../css/painel/global-dm.css"
+      hrefCss[1].href = "../../css/painel/cadastrar-aluno-dm.css"
     }
   }
 })

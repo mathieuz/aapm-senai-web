@@ -8,6 +8,10 @@
     font-family: "Poppins", "Helvetica";
 }
 
+body, html{
+    zoom: 83%;
+}
+
 html{
     height: 100%;
 }

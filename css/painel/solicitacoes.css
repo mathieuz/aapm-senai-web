@@ -309,7 +309,7 @@ th { text-transform: uppercase; }
     width: 820px;
 
     position: absolute;
-    top: 20%;
+    top: 10%;
     background-color: white;
     box-shadow: 1px 1px 5000px 5000px rgba(0, 0, 0, 0.486);
     border-radius: 10px;

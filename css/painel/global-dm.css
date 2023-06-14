@@ -17,6 +17,10 @@ label, button, img{
     -webkit-user-select: none;
 }
 
+body, html{
+    zoom: 83%;
+}
+
 html{
     overflow-x: hidden;
     height: 100%;

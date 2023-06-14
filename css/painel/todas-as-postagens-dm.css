@@ -97,3 +97,11 @@ main{
     .removerPost:hover{
         background-color: rgb(145, 0, 0);
     }
+
+.nomeAdminPost, .tituloPostagem, .descricaoPostagem{
+    color: black!important;
+}
+
+.dataPost{
+    color: gray!important;
+}
