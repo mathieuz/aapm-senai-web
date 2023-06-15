@@ -10,14 +10,14 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-s
 
 
 /* Connfirguração de conexão entre a aplicação e o Firebase. */
-  const firebaseConfig = {
-    apiKey: "AIzaSyDysVkUi2OuEopHyk96jdn0tgaHsM-BQuM",
-    authDomain: "aapm-dois.firebaseapp.com",
-    projectId: "aapm-dois",
-    storageBucket: "aapm-dois.appspot.com",
-    messagingSenderId: "291181532064",
-    appId: "1:291181532064:web:68bbdba3ce0a209bc74ac5"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDysVkUi2OuEopHyk96jdn0tgaHsM-BQuM",
+  authDomain: "aapm-dois.firebaseapp.com",
+  projectId: "aapm-dois",
+  storageBucket: "aapm-dois.appspot.com",
+  messagingSenderId: "291181532064",
+  appId: "1:291181532064:web:68bbdba3ce0a209bc74ac5"
+};
 
 /* A constante 'app' tem o método que inicializa a conexão do Firebase, além de ser utilizado como parâmetro de inicialização de módulos de conexão do Firebase. */
 const app = initializeApp(firebaseConfig)
